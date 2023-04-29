@@ -1,4 +1,4 @@
-import {contentData} from './actions';
+//import {contentData} from './actions';
 const url = "https://airbnb-api-l62o.onrender.com/home";
 
 export async function hostPage(){
@@ -8,51 +8,41 @@ export async function hostPage(){
 }
 export async function PrimaryHost(){
 	const mainPoint = await fetch(url);
-	const use = await contentData(mainPoint);
-	return use;
+	return mainPoint;
 }
 export async function main() {
 	const one = await fetch(url);
-	const use = await contentData(one);
-	return use.mainOne;
+	return one;
 }
 export async function second() {
 	const secon = await fetch(url);
-	const use = await contentData(secon);
-	return use.second;
+	return secon;
 }
 export async function images() {
 	const image = await fetch(url);
-	const use = await contentData(image);
-	return use.contentImage;
+	return image;
 }
 export async function airCover() {
 	const data = await fetch(url);
-	const useD = await contentData(data);
-	return useD.AirCover;
+	return data;
 }
 export async function HostAir() {
 	const host = await fetch(url);
-	const see = await contentData(host);
-	return see.superHost;
+	return host;
 }
 export async function ApartAirbnb() {
 	const apart = await fetch(url);
-	const ap = await contentData(apart);
-	return ap.airbnbApart;
+	return apart;
 }
 export async function question() {
 	const all = await fetch(url);
-	const res = await contentData(all);
-	return res.question;
+	return all;
 }
 export async function footer(){
 	const end = await fetch(url);
-	const use = await contentData(end);
-	return use.footer;
+	return end;
 }
 export async function stack(){
 	const ip = await fetch(url);
-	const ips = await contentData(ip);
-	return ips.userplace;
+	return ip;
 }
