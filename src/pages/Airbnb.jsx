@@ -12,7 +12,6 @@ import Home from "../Component/Home";
 import CenterH from "../Component/Airbnb_base/CenterHeader";
 import End from "../Component/Airbnb_base/End";
 
-
 class Airbnb extends React.Component {
 	constructor() {
 		super();
@@ -37,26 +36,8 @@ class Airbnb extends React.Component {
 	componentDidMount() {
 		let last = document.body.querySelector(".search");
 		const main = document.body.querySelector(".company");
-		const topLevel = document.body.querySelector(".Airbnb_mainText__uGyTL");
-		const fixHeader = document.body.querySelector(".Shared_main__1sop6");
-		const subHeader = document.body.querySelector(".Shared_subNav__JFgoa");
 
 		this.screenSize();
-		const opts = {};
-		const makeHeader = new IntersectionObserver((entries, obs) => {
-			entries.forEach((element) => {
-				if (!element.isIntersecting) {
-					fixHeader.classList.add("sticky");
-					subHeader.classList.add("sub-sticky");
-					this.setState({ hiddenPar: true, changeMiddle: true });
-				} else {
-					fixHeader.classList.remove("sticky");
-					subHeader.classList.remove("sub-sticky");
-					this.setState({ hiddenPar: false, changeMiddle: true });
-				}
-			});
-		}, opts);
-		makeHeader.observe(topLevel);
 		mobiles()
 			.then((nav) => {
 				this.setState((last) => {
@@ -94,7 +75,6 @@ class Airbnb extends React.Component {
 			.catch((err) => {
 				console.error(err, "cannot find the next data");
 			});
-
 	}
 	componentWillUnmount() {
 		const main = document.body.querySelector(".company");
@@ -105,19 +85,19 @@ class Airbnb extends React.Component {
 			.catch((err) => {
 				console.error(err, "sone");
 			});
-		window.addEventListener('resize', () => {
+		window.addEventListener("resize", () => {
 			const header = document.body.querySelector(".Shared_main__1sop6"),
 				middle = document.body.querySelector(".Shared_centerContainer__RC2AY"),
 				childNav = document.body.querySelector(".Shared_subNav__JFgoa");
-			this.setState(window => {
+			this.setState((window) => {
 				if (header.classList.contains("new-head") && middle.classList.contains("remove-content") && childNav.classList.contains("sub-header")) {
 					header.classList.remove("new-head");
 					middle.classList.remove("remove-content");
-					childNav.classList.remove("sub-header")
+					childNav.classList.remove("sub-header");
 				}
-				return { middleNav: window.middleNav = true }
-			})
-		})
+				return { middleNav: (window.middleNav = true) };
+			});
+		});
 	}
 	componentDidUpdate() {
 		let last;
@@ -203,6 +183,26 @@ class Airbnb extends React.Component {
 	appendMiddle() {
 		return <CenterH />;
 	}
+	betterImage() {
+		const topLevel = document.body.querySelector(".Airbnb_mainText__uGyTL");
+		const fixHeader = document.body.querySelector(".Shared_main__1sop6");
+		const subHeader = document.body.querySelector(".Shared_subNav__JFgoa");
+		const opts = {};
+		const makeHeader = new IntersectionObserver((entries, obs) => {
+			entries.forEach((element) => {
+				if (!element.isIntersecting) {
+					fixHeader.classList.add("sticky");
+					subHeader.classList.add("sub-sticky");
+					this.setState({ hiddenPar: true, changeMiddle: true });
+				} else {
+					fixHeader.classList.remove("sticky");
+					subHeader.classList.remove("sub-sticky");
+					this.setState({ hiddenPar: false, changeMiddle: true });
+				}
+			});
+		}, opts);
+		makeHeader.observe(topLevel);
+	}
 	render() {
 		return (
 			<React.Fragment>
@@ -217,7 +217,7 @@ class Airbnb extends React.Component {
 						</div>
 					</div>
 				</div>
-
+				{this.betterImage()}
 				{this.state.hiddenPar && (
 					<div className={AirHeader.hide}>
 						<h1>Airbnb company</h1>
