@@ -219,7 +219,6 @@ class Airbnb extends React.Component {
 						</div>
 					</div>
 				</div>
-				{this.betterImage()}
 				{this.state.hiddenPar && (
 					<div className={AirHeader.hide}>
 						<h1>Airbnb company</h1>
