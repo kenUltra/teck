@@ -1,6 +1,7 @@
-import { contentData as data } from './actions';
+import { contentData as data } from "./actions";
+// const locationLink = "https://airbnb-api-l62o.onrender.com/home";
 const locationLink = "https://airbnb-api-l62o.onrender.com/home";
-const languageLink = "https://airbnb-api-l62o.onrender.com/home/Airbnb-lang"; 
+const languageLink = "https://airbnb-api-l62o.onrender.com/home/Airbnb-lang";
 
 export function makeUpper(changetext) {
 	const start = [...changetext];
@@ -22,42 +23,50 @@ export async function getHeaderData() {
 }
 export async function textHeader() {
 	const main = await fetch(locationLink);
-	const firstNave = await data(main);
+	const use = await data(main);
+	const firstNave = await use.json();
 	return [firstNave.centerNavigation, firstNave.newCenterNavigation];
 }
 export async function subNavData() {
 	const makeSome = await fetch(locationLink);
-	const start = await data(makeSome);
+	const use = await data(makeSome);
+	const start = await start.json();
 	return start.subHeader;
 }
 export async function lotData() {
 	const pount = await fetch(locationLink);
-	const usePoint = await data(pount);
+	const more = await data(pount);
+	const usePoint = await more.json();
 	return usePoint.infinite;
 }
 export async function mobileSize() {
 	const m = await fetch(locationLink);
-	const mob = await data(m);
+	const moe = await data(m);
+	const mob = await moe.json();
 	return mob.mobileData;
 }
 export async function searchTitle() {
 	const datas = await fetch(locationLink);
-	const get = await data(datas);
+	const gets = await data(datas);
+	const get = await gets.json();
 	return get.newNavigation.parentNewNav;
 }
 export async function datesStack() {
 	const mainData = await fetch(locationLink);
-	const use = await data(mainData);
+	const usel = await data(mainData);
+	const use = await usel.json();
 	return use.dates;
 }
 export async function searchContent() {
 	const d = await fetch(locationLink);
-	const get = await data(d);
+	const gets = await data(d);
+	const get = await gets.json();
 	return get.newNavigation.childNewNav;
 }
 export async function Languages() {
 	const leng = await fetch(languageLink);
-	const use = await data(leng);
+	const uses = await data(leng);
+	const use = await uses.json();
 	return use.language;
 }
 export function stringMonth(addOne = 0) {

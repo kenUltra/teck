@@ -3,56 +3,67 @@ const url = "https://airbnb-api-l62o.onrender.com/home/Airbnb-location";
 
 export async function hostPage(){
 	const start = await fetch(url);
-	const usePoint = await contentData(start);
+	const usePoints = await contentData(start);
+	const usePoint = await usePoints.json();
 	return usePoint;
 }
 export async function PrimaryHost(){
 	const mainPoint = await fetch(url);
-	const use = await contentData(mainPoint);
+	const uses = await contentData(mainPoint);
+	const use = await uses.json();
 	return use;
 }
 export async function main() {
 	const one = await fetch(url);
-	const use = await contentData(one);
+	const uses = await contentData(one);
+	const use = await uses.json();
 	return use.mainOne;
 }
 export async function second() {
 	const secon = await fetch(url);
-	const use = await contentData(secon);
+	const uses = await contentData(secon);
+	const use = await uses.json();
 	return use.second;
 }
 export async function images() {
 	const image = await fetch(url);
-	const use = await contentData(image);
+	const uses = await contentData(image);
+	const use = await uses.json();
 	return use.contentImage;
 }
 export async function airCover() {
 	const data = await fetch(url);
-	const useD = await contentData(data);
+	const useDs = await contentData(data);
+	const useD = await useDs.json();
 	return useD.AirCover;
 }
 export async function HostAir() {
 	const host = await fetch(url);
-	const see = await contentData(host);
+	const sees = await contentData(host);
+	const see = await sees.json();
 	return see.superHost;
 }
 export async function ApartAirbnb() {
 	const apart = await fetch(url);
-	const ap = await contentData(apart);
+	const aps = await contentData(apart);
+	const ap = await aps.json();
 	return ap.airbnbApart;
 }
 export async function question() {
 	const all = await fetch(url);
-	const res = await contentData(all);
+	const ress = await contentData(all);
+	const res = await ress.json();
 	return res.question;
 }
 export async function footer(){
 	const end = await fetch(url);
-	const use = await contentData(end);
+	const uses = await contentData(end);
+	const use = await uses.json();
 	return use.footer;
 }
 export async function stack(){
 	const ip = await fetch(url);
-	const ips = await contentData(ip);
+	const ipss = await contentData(ip);
+	const ips = await ipss.json();
 	return ips.userplace;
 }
