@@ -1,6 +1,6 @@
 //import { contentData as data } from "./actions";
 // const locationLink = "https://airbnb-api-l62o.onrender.com/home";
-const locationLink = "https://airbnb-api-l62o.onrender.com/home";
+const locationLink = "https://airbnb-api-l62o.onrender.com/Airbnb-location";
 const languageLink = "https://airbnb-api-l62o.onrender.com/home/Airbnb-lang";
 
 export function makeUpper(changetext) {
