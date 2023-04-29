@@ -14,7 +14,7 @@ export function contentData(analitic) {
 	if (!analitic.ok) {
 		throw new Error(analitic.statusText, "Can't get the data");
 	}
-	return analitic.json();
+	return analitic;
 }
 export function addition(varrible) {
 	let image = document.querySelector(".Section_image__GK3bm");
