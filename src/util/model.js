@@ -1,5 +1,5 @@
 import { contentData as data } from './actions';
-const locationLink = "https://airbnb-api-l62o.onrender.com/home/Airbnb-location";
+const locationLink = "https://airbnb-api-l62o.onrender.com/home";
 const languageLink = "https://airbnb-api-l62o.onrender.com/home/Airbnb-lang"; 
 
 export function makeUpper(changetext) {
