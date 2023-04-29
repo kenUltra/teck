@@ -1,0 +1,326 @@
+.section {
+	display: block;
+}
+.earn {
+	margin: 0 auto;
+	display: flex;
+	height: 36em;
+	max-width: 80%;
+}
+.once, .twice {
+	text-align: center;
+	width: 50%;
+}
+.map{
+	position: relative;
+	border: var(--line-push);
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    margin: 0px auto;
+}
+.morePrecise{
+	display: block;
+}
+.more{
+	text-align: center;
+	cursor: pointer;
+}
+.more > p{
+	font-size: 14px;
+}
+.more > p:hover{
+	text-decoration: underline;
+}
+.twice{
+	display: flex;
+	align-items: center;
+}
+.once {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.company > h1 {
+	font-size: 60px;
+	font-family: ui-serif sans-serif;
+	color: var(--baseColor-air);
+}
+.subCompany > h2 {
+	font-size: 55px;
+	font-family: ui-serif sans-serif;
+}
+.description {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+.place{
+	width: 350px;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 30px;
+    border: var(--line-push);
+}
+.place{
+	display: flex;
+	align-items: center;
+	text-align: left;
+	cursor: pointer;
+}
+.text >h5{
+	font-size: 16px;
+}
+.iconS{
+	width: 50px;
+}
+.iconS >span{
+	display: flex;
+	justify-content: center;
+}
+.iconS > span> svg{
+	display: block;
+    width: 20px;
+    height: 25px;
+	stroke: currentColor;
+	stroke-width: 4.5;
+	color: var(--baseColor-air);
+}
+.thing{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+.thing > p{
+	color: var(--less-gray);
+}
+.description > p {
+	font-weight: 600;
+	border-bottom: var(--line-bar);
+}
+.slice {
+	height: 5px;
+	border-radius: 10px;
+	width: 70%;
+	background: var(--color-tranparent);
+	margin: 30px auto;
+	position: relative;
+}
+.current {
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: var(--position-slide);
+	height: 5px;
+	border-radius: 12px;
+	background: var(--deep-color);
+}
+.change {
+	position: relative;
+}
+.range{
+    margin: 15px 0;
+}
+.house > h3 {
+	font-size: 45px;
+	font-family: ui-rounded sans-serif;
+}
+.change > input[type="range"] {
+	position: absolute;
+	top: -48px;
+	left: 75px;
+	width: 71%;
+	pointer-events: none;
+	-webkit-appearance: none;
+	background: none;
+}
+.change > input[type="range"]::-webkit-slider-thumb {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	pointer-events: auto;
+	background: var(--deep-color);
+	transition: all .50s ease;
+	-webkit-appearance: none;
+}
+.change > input[type="range"]:hover::-webkit-slider-thumb{
+	width: 40px;
+	height: 40px;
+	margin-top: -5px;
+}
+.change > input[type="range"]:hover::-moz-range-thumb{
+	width: 40px;
+	height: 40px;
+	margin-top: -5px;
+}
+.change > input[type="range"]::-moz-range-thumb {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	pointer-events: auto;
+	background: var(--deep-color);
+	-moz-appearance: none;
+}
+.action{
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mapUser{
+	display: block;
+    width: 100%;
+    height: 100%;
+    background: url(http://localhost:3000/Assets/images/hero/promo_tv4k_avail__e17d9isb0vwy_medium.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    background-size: cover;
+}
+.where{
+	margin: 20px auto;
+    border: var(--line-push);
+    background: var(--house-simple);
+    box-shadow: 0px 3px 12px var(--gray-color);
+    border-radius: 10px;
+	transition: color .4s ease;
+	cursor: pointer;
+}
+.where:hover{
+	background: var(--deep-color);
+	color: var(--true-white);
+}
+.where >h1{
+	font-size: 14px;
+    padding: 10px 20px;
+}
+.zoom{
+    width: 40px;
+    bottom: 20px;
+	position: absolute;
+    right: 20px;
+    height: 65px;
+	border-radius: 5px;
+	border: var(--line-push);
+    background: var(--house-simple);
+}
+.zoomIn,
+.zoomOut{
+	width: 30px;
+	height: 30px;
+}
+.spacer > span{
+	display: block;
+    margin: 2px 0px;
+    width: 100%;
+    height: 2px;
+    background: var(--not-realy-gray);
+}
+.zoomIn > span,
+.zoomOut > span{
+	display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 12px;
+	cursor: pointer;
+}
+.zoomIn > span > svg,
+.zoomOut > span > svg{
+	width: 15px;
+    height: 30px;
+    display: block;
+}
+@media only screen and (max-width: 1120px ) and (min-width: 900px) {
+	.change > input[type="range"]{
+		left: 59px;
+		width: 72%;
+	}
+}
+@media only screen and (max-width: 850px) and (min-width: 701px) {
+	.change > input[type="range"]{
+		left: 85px;
+		width: 70%;
+	}
+	.once,
+	.twice{
+		width: 100%;
+	}
+	.twice{
+		margin-bottom: 20px;
+	}
+	.company > h1{
+		font-size: 80px;
+	}
+	.subCompany > h2{
+		font-size: 70px;
+	}
+	.earn{
+		height: auto;
+		flex-direction: column;
+	}
+	.house > h3{
+		font-size: 65px;
+	}
+	.description{
+		font-size: 1.2087rem;
+		gap: 7px;
+	}
+	.description > p{
+		font-weight: bold;
+	}
+	.slice{
+		width: 65%;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.earn{
+		flex-direction: column;
+		height: auto;
+	}
+	.place{
+		width: auto;
+		margin: 10px auto;
+	}
+	.once,
+	.twice{
+		width: 100%;
+	}
+	.company > h1{
+		font-size: 40px;
+	}
+	.subCompany > h2{
+		font-size: 35px;
+	}
+
+}
+@media only screen and (max-width: 550px) {
+	.change > input[type="range"]{
+		left: 50px;
+		width: 75%;
+	}
+	.map{
+		height: 385px;
+	}
+	.text > h5{
+		font-size: 12px;
+	}
+	.thing{
+		gap: 5px;
+	}
+	.thing > p{
+		font-size: 12px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.change > input[type="range"]{
+		left: 35px;
+	}
+}

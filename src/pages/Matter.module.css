@@ -1,0 +1,15 @@
+.removeContent{
+    background: var(--center-color);
+    position: relative;
+    height: 100pc;
+}
+.content{
+    text-align: center;
+    background: var(--bg-color);
+    border-radius: 10px;
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    right: 50px;
+    height: 138px;
+}

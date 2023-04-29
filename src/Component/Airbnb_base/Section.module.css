@@ -1,0 +1,144 @@
+.wrapSection{
+    margin: 10px 0px;
+    width: 200px;
+    flex: 1 1 270px;
+}
+.detailCard{
+    margin: 10px 0px;
+    cursor: default;
+}
+.imageSLide{
+    height: 280px;
+    position: relative;
+    border-radius: 10px;
+}
+.slideI{
+    display: flex;
+    height: 100%;
+    gap: 1px;
+    transition: transform .5s cubic-bezier(0.03, -0.03, 1, 1);
+    border-radius: 12px;
+    overflow: scroll hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+.slideI{
+    scrollbar-width: none;
+}
+.slideI::-webkit-scrollbar{
+    display: none;
+}
+.slideI>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.last{
+    margin: 5px 0px;
+    display: flex;
+    gap: 5px;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+.places> h3{
+    font-size: 15px;
+}
+.rating{
+    display: flex;
+    gap: 5px;
+}
+.second>.detailHost > h2,
+.third> .date{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--less-gray);
+}
+.last>.prices>span{
+    font-weight: 500;
+}
+.dateline{
+    display: block;
+}
+.other{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+    display: none;
+}
+.imageSLide:hover .other{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftAr, .rigthAr{
+    width: 35px;
+    height: 35px;
+    border: var(--line-push);
+    background: var(--house-simple);
+    margin: 0 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.ArrowLeft,
+.ArrowRight{
+    display: block;
+}
+.stars{
+    width: 25px;
+    height: auto;
+}
+.stars > span > svg{
+    display: block;
+    width: 17px;
+    height: 16px;
+    fill: currentColor;
+    color: var(--deep-color);
+}
+.sumRate > p{
+    margin-top: -3px;
+    margin-right: 5px;
+}
+.ArrowLeft > svg,
+.ArrowRight > svg{
+    width: 20px !important;
+    height: 15px !important;
+    stroke-width: 6px !important;
+    padding: 10px 7px;
+}
+.image{
+    transform: translate( var(--move-image-by),0px);
+    transition: transform 1s ease;
+    height: 100%;
+}
+.ArrowLeft > svg{
+    transform: rotate(180deg);
+}
+@media (prefers-reduced-motion: no-preference) {
+    .imageSLide:hover .other{
+        animation: showB 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+}
+@keyframes showB {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+@media only screen and (max-width:650px) {
+    .wrapSection{
+        flex: 1 1 180px;
+    }
+    .imageSLide{
+        height: 260px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .wrapSection{
+        flex: 1 1 auto;
+    }
+}

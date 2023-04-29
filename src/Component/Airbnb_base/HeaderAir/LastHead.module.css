@@ -1,0 +1,122 @@
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.text > a{
+    text-decoration: none;
+    color: currentColor;
+}
+.text > a > h2{
+    font-size: 17px;
+    padding: 9px 15px;
+    border-radius: 20px;
+    transition: background-color .7s ease;
+}
+.text:hover > a > h2,
+.icon:hover {
+    background: var(--color-tranparent);
+}
+.icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: background-color .7s ease;
+}  
+.iconUser{
+    position: relative;
+    width: 70px;
+    height: 35px;
+    border: var(--line-push);
+    border-radius: 30px;
+    transition: box-shadow .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.iconUser{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.iconUser:hover{
+    box-shadow: 0px 3px 7px var(--backdrop);
+}
+.sand,
+.user{
+    width: 50%;
+    height: 100%;
+}
+.sand > span,
+.user > span{
+    display: block;
+    opacity: .5;
+}
+.sand > span{
+    height: 100%;
+    margin: 7px;
+    opacity: 1;
+}
+.user > span{
+    margin-top: 2px;
+}
+.sand > span > svg{
+    display: block;
+    stroke: currentColor;
+    stroke-width: 2.578px;
+    width: 22px;
+    height: 22px;
+    color: var(--deep-color);
+}
+.user > span > svg{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+.icon > span{
+    display: block;
+    padding: 6px 6px;
+}
+.icon > span > svg{
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+.dots{
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    width: 10px;
+    height: 10px;
+    background: var(--baseColor-air);
+    border-radius: 50%;
+    border: 2px solid var(--not-realy-gray);
+}
+@media only screen and (max-width: 915px) {
+    .text > a > h2{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .iconUser{
+        width: 63px;
+    }
+    .sand > span{
+        margin: 9px;
+    }
+    .sand > span > svg{
+        width: 16px;
+        height: 18px;
+    }
+    .icon > span{
+        padding: 8px 8px;
+    }
+    .icon > span > svg{
+        width: 19px;
+        height: 18px;
+    }
+    .user > span >svg {
+        width: 25px;
+    }
+    .dots{
+        width: 7px;
+        height: 7px;
+    }
+}

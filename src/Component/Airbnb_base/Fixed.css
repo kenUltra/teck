@@ -1,0 +1,97 @@
+.hero-mob{
+    width: 35px;
+    height: 35px;
+}
+.hero-mob.one>svg {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    stroke-width: 4px;
+}
+.se >svg{
+    display: block;
+}
+.col{
+    color: var(--less-gray);
+}
+.last>svg{
+    fill: currentColor;
+}
+.make > span{
+    background: var(--house-simple) !important;
+    transform: translate(0px, 7px) scale(0) !important;
+}
+.make:hover > h3{
+    color: var(--less-gray);
+}
+.make:hover > span{
+    width: 100% !important;
+    background: var(--bg-color) !important;
+    transform: translate(0px,7px) scale(1) !important;
+}
+.changeSome3{
+    width: 295px;
+    display: flex !important;
+}
+.changeSome1,
+.changeSome2{
+    display: none !important;
+}
+.list1,
+.list2{
+    display: none !important;
+}
+.hero-mob > svg{
+    stroke: currentColor;
+    color: var(--less-gray);
+    height: 30px;
+}
+.se>svg {
+    color: var(--baseColor-air) !important;
+}
+.visit > p{
+    color: var(--true-bl) !important;
+}
+.visit > .hero-mob > svg{
+    color:var(--baseColor-air);
+    fill: var(--baseColor-air) !important;
+}
+.seleted > h3{
+    color: var(--true-bl) !important;
+}
+.seleted > span{
+    width: 100% !important;
+    height: 3px !important;
+    background: var(--true-bl) !important;
+    transform: scale(1) translate(0px, 6px) !important;
+}
+.box-where {
+    width: 365px;
+}
+.box-check{
+    width: 140px;
+}
+.centerA3{
+    display: none !important;
+}
+.-Date{
+    display: none;
+}
+.color-some{
+    background: var(--house-simple) !important;
+    box-shadow: 0 0 16px var(--less-gray);
+}
+@media  only screen and (max-width: 1025px) {
+    .box-check {
+        width: 180px;
+    }
+}
+@media only screen and (max-width: 850px) and  (min-width: 651px){
+    .changeSome3{
+        width: 215px;
+    }
+    .box-check {
+        width: 190px;
+    }
+}

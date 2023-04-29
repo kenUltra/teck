@@ -1,0 +1,163 @@
+.slideWrap {
+  position: relative;
+  z-index: 18;
+  overflow: hidden;
+}
+.slideWrap {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 92%;
+  height: 100%;
+  margin: 0 auto;
+  background: var(--true-white);
+}
+.left {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+  font-weight: 600;
+  transition: transform 1s ease;
+}
+.right {
+  display: flex;
+  gap: 10px;
+  transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .right> .twice{
+    transition: all 1s ease-in-out;
+  }
+}
+.once,
+.twice {
+  border: var(--line-push);
+  border-radius: 30px;
+  cursor: pointer;
+}
+.twice {
+  background: var(--bg-color);
+  border: none;
+  font-weight: 600;
+}
+.once > p,
+.twice > p {
+  width: 100px;
+  padding: 7px 0;
+  font-size: 14px;
+}
+.twice > p {
+  width: 125px;
+}
+.middle {
+  display: inline-block !important;
+  height: 35px !important;
+  border: 1px solid var(--less-gray);
+  margin: 0 10px !important;
+}
+.wrapbtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+}
+.wrapbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.blur {
+  backdrop-filter: blur(2rem);
+  width: 45px;
+  height: 45px;
+}
+.blur > .leftBtn,
+.blur > .rightBtn {
+  margin: 6px;
+}
+.blur > .leftBtn > button,
+.blur > .rightBtn > button {
+  border: var(--line-push);
+  background: var(--transparent-style);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.Choice_left__VoGt4#l{
+  color: rgb(128, 0, 255);
+}
+@media (prefers-reduced-motion: no-preference){
+  .middle{
+    transition: transfrom 2s cubic-bezier(.5, 1 , .75, .5);
+  }
+}
+@media only screen and (max-width: 1130px) {
+  .once >p,
+  .twice >p{
+    padding: 7px 0;
+    font-size: 11px;
+  }
+  .middle{
+    margin: 0 5px !important;
+  }
+  .slideWrap{
+    width: 90%;
+  }
+  .blur{
+    width: 40px;
+    height: 40px;
+  }
+  .blur > .leftBtn > button,
+  .blur > .rightBtn > button {
+  width: 30px;
+  height: 30px;
+}
+}
+@media only screen and (max-width: 930px) {
+  .slideWrap{
+    width: 85%;
+  }
+  .once > p,
+  .twice > p {
+    width: 95px;
+  }
+}
+@media only screen and (max-width: 600px){
+  .slideWrap{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .slideWrap {
+    width: 80%;
+  }
+  .left, .right {
+    gap: 5px;
+  }
+  .blur{
+    width: 30px;
+    height: 30px;
+  }
+  .blur > .leftBtn,
+  .blur > .rightBtn {
+   margin: 1px; 
+  }
+  .blur > .leftBtn > button,
+  .blur > .rightBtn > button{
+    width: 25px;
+    height: 25px;
+    font-size: 11px;
+  }
+  .once>p,
+  .twice>p {
+    width: 80px;
+    font-size: 9px;
+  }
+  .middle{
+    height: 25px !important;
+  }
+}

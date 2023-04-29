@@ -1,0 +1,8 @@
+.hidden{
+    height: 4em;
+}
+@media only screen and (max-width: 850px) {
+    .hidden{
+        height: 6em;
+    }
+}

@@ -1,0 +1,103 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4em;
+    background: var(--house-simple);
+	z-index: 30;
+}
+.header {
+	display: flex;
+	align-items: center;
+    border-bottom: var(--line-push);
+}
+.wrapHeader{
+	margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.airIcon {
+	margin-left: 20px;
+	flex: 1;
+}
+.icons > span {
+    fill: var(--baseColor-air);
+}
+.icons > span > svg{
+    width: 40px !important;
+    height: 40px !important;
+}
+.airOther{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.airFirstSide,
+.airSecondSide,
+.chat, 
+.line{
+	display: block;
+}
+.one{
+	display: flex;
+	align-items: center;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.one{
+	border: var(--line-push);
+    padding: 7px 20px;
+    gap: 5px;
+	color: var(--true-white);
+    background: var(--linear-bg);
+}
+.iconLeft > span{
+	display: block;
+    margin-top: 5px;
+}
+.iconLeft > span > svg{
+	stroke: currentColor;
+    stroke-width: 0.5px;
+}
+.text > h1{
+	font-size: 15px;
+    font-weight: 500;
+}
+.line{
+	border: var(--line-bar);
+	border-radius: 10px;
+}
+.line > a:hover{
+	color: var(--true-white);
+	transition: color .8s ease;
+}
+.line:hover{
+	background: var(--deep-color);
+}
+.line > a{
+	color: currentColor;
+	text-decoration: none;
+} 
+.line > a > h1{
+	font-size: 15px;
+    padding: 13px 25px;
+}
+
+@media only screen and (max-width: 700px){
+    .airSecondSide{
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		background: var(--true-white);
+		box-shadow: 1px 1px 15px var(--gray-color);
+	}
+	.line{
+		width: 60%;
+		margin: 6px auto;
+		text-align: center;
+	}
+}

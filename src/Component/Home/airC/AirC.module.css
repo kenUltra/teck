@@ -1,0 +1,173 @@
+.sec {
+	height: 100em;
+}
+.airCover {
+	height: 7em;
+    width: 20%;
+    margin: 10px auto;
+}
+.images {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.images > img {
+	height: 60%;
+}
+.title {
+	text-align: center;
+	font-family: ui-monospace Gill Sans sans-serif;
+}
+.title > h1 {
+	font-size: 40px;
+}
+.compare {
+	width: 60%;
+	margin: 0 auto;
+}
+.table {
+	width: 100%;
+	margin: 15px 0;
+	border-collapse: collapse;
+}
+.table > thead {
+	width: 100%;
+	height: 5pc;
+	border-bottom: var(--line-push);
+}
+.table > thead > tr {
+	position: sticky;
+	top: 0;
+	height: calc(env(safe-area-inset-top) + 48px);
+}
+.top {
+	width: 300px;
+}
+.why > .deepWhy > p {
+	color: var(--less-gray);
+}
+.top > p {
+	font-size: 25px;
+	font-weight: 400;
+	font-family: ui-monospace sans-serif;
+	letter-spacing: 0.03841em;
+}
+.link {
+	color: var(--deep-color);
+	font-weight: 500;
+}
+.list {
+	border-bottom: var(--line-push);
+}
+.compB {
+	padding: 1.5pc 0px;
+}
+.compB > h4 {
+	font-size: 24px;
+	margin-bottom: 12px;
+	font-family: ui-monospace;
+	text-align: initial;
+}
+.compB > span {
+	font-size: 20px;
+	font-family: ui-monospace sans-serif;
+	font-weight: 500;
+	display: block;
+	text-align: initial;
+}
+.compB > p {
+	color: var(--deep-color);
+	width: 420px;
+	font-weight: 300;
+	text-align: initial;
+	line-height: 1.458em;
+}
+.info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 6em;
+}
+.information > a {
+	cursor: pointer;
+	font-weight: 500;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 7px;
+	border: var(--line-bar);
+	color: var(--deep-color);
+	background: var(--hidden-el);
+	transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.information:hover > a {
+	color: var(--true-white);
+	background: var(--deep-color);
+}
+@media only screen and (max-width: 900px)  {
+	.compare{
+		width: 80%;
+	}
+	.sec{
+		height: auto;
+	}
+	.table{
+		width: 100%;
+		margin: 15px auto;
+	}
+	.compB > p{
+		width: 300px;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.table{
+		width: 80%;
+		margin: 15px auto;
+	}
+	.sec{
+		height: auto;
+	}
+	.top >p{
+		font-size: 17px;
+	}
+	.table > thead{
+		height: 3pc;
+	}
+	.compare{
+		width: 100%;
+	}
+	.compB{
+		padding: 1pc 0px;
+		width: 30%;
+	}
+	.list > td > span > h5 > svg{
+		width: 17px !important;
+		height: 17px !important;
+	}
+	.compB > h4{
+		font-size: 17px;
+	}
+	.compB > p{
+		font-size: 12px;
+		width: 216px;
+	}
+	.why > .deepWhy > p{
+		max-width: 80%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.title{
+		margin: 0 auto;
+		width: 85%;
+	}
+	.title > h1{
+		font-size: 30px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.table{
+		width: 50%;
+		margin: 15px auto;
+	}	
+}

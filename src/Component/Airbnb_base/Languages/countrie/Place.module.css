@@ -1,0 +1,29 @@
+.edge{
+    border-radius: 5px;
+    line-height: 1.3915;
+    height: 65px;
+    flex: 1 1 151px;
+    border: 1px solid var(--transparent-style);
+    cursor: pointer;
+    transition: background-color .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+}
+.edge:hover{
+    background: var(--bg-color);
+}
+.where{
+    margin-top: 12px;
+}
+.where,
+.used{
+    margin-left: 15px;
+}
+.where >h1{
+    font-size: 15px;
+    font-weight: 400;
+}
+.used > p{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--less-gray);
+}

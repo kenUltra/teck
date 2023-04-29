@@ -1,0 +1,57 @@
+.main{
+    display: inline;
+    flex: 1 1 270px;
+}
+.image{
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+    border: var(--line-push);
+    background: var(--not-realy-gray);
+}
+.detail{
+    margin: 15px 0px;
+}
+.one{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.one>.left,
+.one>.right,
+.two>.detailTwo,
+.three>.dateLoad,
+.four>.prices{
+    background: var(--bg-color);
+    height: 23px;
+    border-radius: 5px;
+}
+.one>.left{
+    width: 160px;
+}
+.one>.right{
+    width: 50px;
+}
+.two,
+.three{
+    margin: 5px 0px;
+}
+.two>.detailTwo{
+    width: 120px;
+}
+.three>.dateLoad{
+    width: 100px;
+}
+.four>.prices{
+    width: 130px;
+}
+@media  screen and (max-width: 650px) {
+    .main{
+        flex: 1 1 180px;
+    }
+}
+@media only screen and (max-width: 450px) {
+   .main{
+    flex: 1 1 auto;
+   }
+}

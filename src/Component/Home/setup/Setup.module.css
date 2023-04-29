@@ -1,0 +1,107 @@
+.main {
+	width: 100%;
+	height: 53em;
+	background: var(--true-white);
+}
+.primary > h1 {
+	text-align: center;
+	font-family: ui-monospace sans-serif;
+	font-size: 45px;
+}
+.secondary {
+	width: 85%;
+    height: 31em;
+    margin: 0 auto;
+}
+.secondary > img {
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
+.terminary {
+	display: flex;
+	gap: 20px;
+	margin: 0 auto;
+	width: 85%;
+}
+.mains {
+	line-height: 23px;
+	font-family: ui-monospace sans-serif;
+}
+.mains > .titles {
+	margin-bottom: 12px;
+}
+.mains > .titles > h1 {
+	font-size: 17px;
+}
+.mains > .about > p {
+	color: var(--less-gray);
+	font-size: 15px;
+}
+.detailContent {
+	height: 7.2rem;
+    padding: 1.5pc 0pc;
+}
+.wrap {
+	display: flex;
+    line-height: 1.95;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.txthost > .txt > h3 {
+	font-size: 25px;
+	font-weight: 700;
+}
+.btnAir > .btnCore {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 15px auto;
+    border-radius: 9px;
+}
+.btnCore{
+    border: var(--line-push);
+    background: var(--linear-bg);
+    padding: 10px 25px;
+    cursor: pointer;
+}
+.texting{
+    font-size: 15px;
+}
+.texting>span{
+    color: var(--true-white);
+    font-weight: 600;
+}
+.icon{
+    width: 23px;
+    height: 22px;
+}
+@media only screen and (max-width: 850px) and (min-width: 701px) {
+	.main{
+		height: auto;
+	}
+	.secondary{
+		height: 22em;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.main{
+		height: auto;
+	}
+	.primary{
+		margin-top: 20px;
+	}
+	.primary > h1 {
+		font-size: 25px;
+		width: 85%;
+		margin: 0 auto;
+	}
+	.secondary{
+		height: 15em;
+	}
+	.terminary{
+		flex-direction: column;
+		text-align: center;
+	}
+}

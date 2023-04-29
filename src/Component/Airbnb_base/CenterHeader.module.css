@@ -1,0 +1,295 @@
+.wrap{
+    display: block;
+    position: relative;
+}
+.text{
+    display: flex;
+    gap: 30px;
+}
+.three >a{
+    text-decoration: none;
+    color: var(--true-bl);
+}
+.one > h3,
+.two > h3,
+.three > a >h3{
+    cursor: pointer;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.two:hover h3,
+.three:hover h3{
+    color: var(--bg-color);
+}
+.two:hover span,
+.three:hover span{
+    width: 100%;
+    height: 3px;
+    background: var(--bg-color);
+    transform: translate(0px,7px) scale(1);
+}
+.one>span,
+.two>span,
+.three>span{
+    display: block;
+    width: 10px;
+    height: 3px;
+    transform: translate(0px, 7px) scale(0);
+    transition: transform 1s ease;
+}
+.one>span{
+    width: 100%;
+    height: 3px;
+    background: var(--true-bl);
+    transform: translate(0px, 7px);
+}
+.child{
+    position: absolute;
+    top: 55px;
+    left: -270px;
+    right: 0;
+    width: 53rem;
+    height: 60px;
+    border: var(--line-push);
+    border-radius: 30px;
+    background: var(--bg-color);
+}
+.wraping{
+    display: flex;
+    height: 100%;
+    line-height: 1.29783em;
+    gap: 3px;
+}
+@media (prefers-reduced-motion: no-preference){
+    .child{
+        animation: down 1.5s ease alternate;
+    }
+}
+.searchMain{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.searchMain:hover,
+.lastSearch:hover{
+    background: var(--not-realy-gray);
+}
+.title > h1,
+.lastT > h1{
+    font-size: 15px;
+    font-weight: 500;
+    transform: translate(25px, 0px);
+}
+.subTitle> h2,
+.lastsubT > h2{
+    font-size: 15px;
+    font-weight: 400;
+    transform: translate(25px, 0px);
+}
+.lastSearch{
+    display: flex;
+    align-items: center;
+    width: 290px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.lastBox{
+    display: block;
+    width: 100%;
+}
+.btnSearch{
+    width: 95%;
+    height: 80%;
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    border-radius: 30px;
+    color: var(--house-simple);
+    background: var(--linear-bg);
+}
+.iconSea{
+    width: 40px;
+    height: 40px;
+}
+.iconSea > svg{
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    stroke: currentColor;
+    stroke-width: 5px;
+    color: var(--font-color-white);
+}
+.text > span{
+    font-size: 17px;
+    font-weight: bold;
+}
+.line>span{
+    display: block;
+    width: 1px;
+    height: 35px;
+    margin: 13px 0;
+    background: var(--not-realy-gray);
+}
+.load{
+    width: 850px;
+    position: absolute;
+    top: 50px;
+    left: -270px;
+    height: 65px;
+    background: var(--bg-color);
+    border-radius: 30px;
+}
+.loadWraper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 5px;
+}
+.loadOne,
+.loadTwo,
+.loadthree,
+.loadfour{
+    width: 115px;
+    height: 60px;
+    border-radius: 30px;
+}
+.loadOne{
+    width: 360px;
+}
+.loadfour{
+    width: 210px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.loadLast{
+    width: 90px;
+}
+.loadSearch{
+    width: 100px;
+    height: 50px;
+    background: var(--baseColor-air);
+    border-radius: 50px;
+}
+@keyframes down {
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+    from{
+        transform: scale(0.2);
+        opacity: 0;
+    }
+}
+@media only screen and (max-width: 1025px) {
+    .child{
+        left: -180px;
+    }
+}
+@media only screen and (max-width: 950px) and (min-width: 651px) {
+    .child{
+        width: 640px;
+        left: -110px;
+    }
+    .title > h1,
+    .lastT > h1,
+    .subTitle> h2,
+    .lastsubT > h2{
+     font-size: 13px;
+    }
+    .lastSearch{
+        width: 350px;
+    }
+    .iconSea{
+        width: 30px;
+        height: 40px;
+    }
+    .iconSea>svg{
+        width: 16px;
+    }
+    .one > h3,
+    .two > h3,
+    .three > a >h3{
+     font-size: 12px;   
+    }
+    .text >span{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .wrap{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+    .child{
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: 35rem;
+        border: none;
+        background: var(--house-simple);
+    }
+    .wraping{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .text{
+        gap: 15px;
+        justify-content: center;
+    }
+    .one > h3,
+    .two > h3,
+    .three > a >h3{
+        font-size: 15px;
+    }
+    .searchMain{
+        height: 50px;
+        width: 100%;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        border-radius: 11px;
+        border: var(--line-push);
+        gap: 12px;
+    }
+    .line>span{
+        display: none;
+    }
+    .lastSearch{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 61px;
+        align-items: center;
+        border-radius: 10px;
+        border: var(--line-push);
+    }
+    .btnSearch{
+        width: 50%;
+        height: 65%;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .iconSea{
+        width: 35px;
+    }
+    .iconSea>svg{
+        width: 16px;
+        stroke-width: 4px;
+    }
+    .text >span{
+        font-size: 15px;
+        font-weight: 500;
+        font-family: math;
+    }
+  }

@@ -1,0 +1,16 @@
+.sticky,
+.sub-sticky{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 300;
+}
+.sub-sticky{
+    top: 95px;
+    border-top: var(--line-push);
+    box-shadow: 0 5px 5px var(--bg-color);
+}
+.show{
+    display: block !important;
+}

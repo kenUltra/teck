@@ -1,0 +1,126 @@
+.friend {
+	display: block;
+}
+.apart {
+	margin: 0 auto;
+	width: 70%;
+}
+.eachThing {
+	display: block;
+	border-radius: 10px;
+	border: 1px solid beige;
+}
+.images {
+	width: 300px;
+	height: 300px;
+	border-radius: 10px 10px 0px 0px;
+	background: var(--color-tranparent);
+}
+.title > h1 {
+	text-align: center;
+	font-size: 40px;
+	font-weight: 600;
+}
+.content {
+	display: flex;
+	gap: 20px;
+	margin: 30px 10px;
+}
+.detail {
+	margin: 10px auto;
+	width: 90%;
+}
+.detail > .main,
+.detail > .second {
+	margin: 3px 25px;
+	width: 80%;
+	height: 25px;
+	border-radius: 10px;
+	background: var(--bg-color);
+}
+.end {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+.wrap {
+	height: 340px;
+}
+.imagesWrap {
+	display: block;
+}
+.imagesWrap > img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+.detailContent {
+	width: 100%;
+	height: 60px;
+	line-height: 1.49395em;
+	margin: 0 auto;
+	text-align: center;
+}
+.some {
+	color: currentColor;
+}
+.detailContent > h1 {
+	font-size: 20px;
+}
+.detailContent > p {
+	font-size: 15px;
+}
+.end > h1 {
+	font-weight: 400;
+	font-size: 23px;
+}
+@media only screen and (max-width: 850px) and (min-width: 701px){
+	.apart{
+		width: 85%;
+		margin-top: 15px;
+	}
+	.wrap{
+		height: 260px;
+	}
+	.title > h1{
+		font-size: 35px;
+	}
+	.detailContent > h1 {
+		font-size: 15px;
+	}
+	.detailContent > p{
+		font-size: 13px;
+	}
+	.end > h1{
+		font-size: 17px;
+		line-height: 1.55105;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.apart{
+		width: 80%;
+	}
+	.content{
+		flex-wrap: wrap;
+	}
+	.title{
+		margin: 15px 0px 0px;
+	}
+	.title > h1{
+		font-size: 25px;
+	}
+	.wrap{
+		width: 100%;
+		height: 100%;
+	}
+	.some{
+		margin: 12px 0px;
+	}
+	.end{
+		width: 100%;
+	}
+	.end > h1 {		
+		font-size: 18px;
+	} 
+}

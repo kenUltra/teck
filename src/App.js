@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from "react-router-dom";
+import Host from "./pages/Host";
+import Matter from "./pages/Matter";
+import Airbnb from "./pages/Airbnb";
+import Home from "./Component/Home/Home";
+
+const routePage = createBrowserRouter(
+	createRoutesFromElements(
+		<Route path="/" errorElement={<Matter />}>
+			<Route index element={<Airbnb />} />
+			<Route path="/host-house">
+				<Route index element={<Host />} />
+			</Route>
+			<Route path="/become-hoster">
+				<Route index element={<Home />} />
+			</Route>
+			<Route path="/search-index">
+				<Route index element={<h2>seomthing say mae</h2>} />
+			</Route>
+		</Route>
+	)
+);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return <RouterProvider router={routePage} />;
 }
 
 export default App;

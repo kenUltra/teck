@@ -1,13 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+:root {
+	--gray-color: #717171;
+	--move-image-by: 0px;
+	--slide-to: 0px;
+	--circle: 180deg;
+	--rotate-ar: rotate(var(--circle));
+	--transparent-style: #46047900;
+	--color-tranparent: #ececec;
+	--baseColor-air: #ff385c;
+	--hidden-el: #ececec00;
+	--shade-baseColor-air: #e00b41;
+	--backdrop: #00000054;
+	--true-bl: #222222;
+	--top-bg: #f7f7f7;
+	--true-white: #ffffff;
+	--less-gray: #b0b0b0;
+	--not-realy-gray: #dddddd;
+	--line-push: 1px solid #dddddd;
+	--line-big: 2px solid var(--deep-color);
+	--line-push-creater: 2px solid #dddddd;
+	--bg-color: #ebebeb;
+	--font-color-white: #f7f7f7;
+	--house-simple: #ffffff;
+	--blue-ocean: #428bff;
+	--deep-color: #000;
+	--shade-color: #92174d;
+	--shade-purple: #460479;
+	--see-content: 100px;
+	--see-other: 170px;
+	--middle-size: 130px;
+	--line-bar: 1px solid #0000009e;
+	--current-slide: 20%;
+	--element-on-center: 0 auto;
+	--position-slide: var(--current-slide);
+	--linear-bg: linear-gradient(to right, #e61e4d 0%, #e31c5f 50%, #d70466 100%);
+	--center-color: radial-gradient(circle at center, #ff385c 0%, #e61e4d 27.5%, #e31c5f 40%, #d70466 57.5%, #bd1e59 75%, #bd1e59 100%);
+	--ln-shade: linear-gradient(to right, #bd1e59 0%, #92174d 50%, #861453 100%);
+	--ln-shade-center: radial-gradient(circle at center, #d70466 0%, #bd1e59 30%, #92174d 55%, #861453 72.5%, #6c0d63 90%, #6c0d63 100%);
+	--multi-color: linear-gradient(to right, #59086e 0%, #460479 50%, #440589 100%);
+	--multi-color-center: radial-gradient(circle at center, #6c0d63 0%, #59086e 30%, #460479 55%, #440589 72.5%, #3b07bb 90%, #3b07bb 100%);
+	--src-size: 1px;
+	--back-home: linear-gradient(136deg, black, transparent);
+	--shadow--air: calc(0px + var(--src-size)) calc(2px + var(--src-size)) calc(var(--src-size) + 5px) var(--baseColor-air), calc(0px - var(--src-size)) calc(-1px - var(--src-size)) calc(var(--src-size) + 7px) var(--baseColor-air);
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.new-head {
+	height: 10pc;
+	position: sticky;
+	transform: all 1s ease;
+	z-index: 600;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.new-head {
+		animation: long 1s infinite ease-in-out;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.new-head {
+		height: 100% !important;
+	}
 }

@@ -1,0 +1,365 @@
+.company > svg {
+	color: var(--baseColor-air);
+}
+.hide-text {
+	transform: translate(-330px, 0px);
+}
+.hide-bar {
+	transform: translate(-350px, 0px);
+}
+.add-more {
+	transform: translate(-346px, 0px);
+}
+.nav-header {
+	display: flex;
+	align-items: center;
+}
+.nav-header > p {
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+}
+.on2 > p {
+	color: var(--less-gray);
+}
+.nav-header.on0 {
+	margin-left: 20px;
+}
+.nav-header > span {
+	display: block;
+	width: 2px;
+	height: 30px;
+	margin: 0 20px;
+	background: var(--color-tranparent);
+}
+.search {
+	position: absolute;
+	right: 5px;
+	width: 35px;
+	height: 35px;
+	border-radius: 30px;
+	background: var(--baseColor-air);
+	cursor: pointer;
+}
+.search > svg {
+	display: block;
+	width: 21px;
+	height: 20px;
+	padding: 7px 7px;
+	stroke: currentColor;
+	stroke-width: 5px;
+	color: var(--font-color-white);
+}
+.left-airbnb {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.left-airbnb > .host-house > .last {
+	padding: 11px 20px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.wrap-last-cont {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.left-airbnb > .host-house > .last:hover {
+	background: var(--bg-color);
+}
+.last-icons {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+}
+.host-house{
+    text-decoration: none;
+    color: currentColor;
+}
+.last-icons:hover {
+	background: var(--bg-color);
+}
+.last-icons > svg {
+	display: block;
+	width: 25px;
+	height: 25px;
+	padding: 10px;
+	cursor: pointer;
+}
+.right-airbnb {
+	display: flex;
+	align-items: center;
+	width: 75px;
+	height: 40px;
+	border-radius: 30px;
+}
+.right-airbnb {
+	position: relative;
+	border: var(--line-push);
+	transition: box-shadow 1s cubic-bezier(0.25, 0.1, 0.6, 1.03);
+}
+.right-airbnb:hover {
+	box-shadow: 0px 3px 6px var(--gray-color);
+}
+.right-airbnb > .nimi-shape {
+	position: absolute;
+	top: 0;
+	right: 5px;
+	width: 10px;
+	height: 10px;
+	background: var(--baseColor-air);
+	border-radius: 50%;
+	border: 2px solid var(--font-color-white);
+}
+.right-menu,
+.right-user {
+	width: 50%;
+	height: 35px;
+}
+.right-menu > svg,
+.right-user > svg {
+	display: block;
+}
+.right-menu > svg {
+	stroke: currentColor;
+	stroke-width: 3px;
+	width: 20px;
+	padding: 8px 12px;
+}
+.right-user > svg {
+	width: 30px;
+	padding: 2px 2px;
+	fill: currentColor;
+	color: var(--gray-color);
+}
+.left-airbnb > .host-house > .last > h2 {
+	font-weight: 500;
+	font-size: 17px;
+}
+.filter-icon {
+	padding: 0 8px;
+}
+.pos1 > .Shared_image__Rk6m7 > img,
+.pos1 > .Shared_title__y2Gkj > p {
+	opacity: 1 !important;
+}
+.pos1 > .Shared_title__y2Gkj > p {
+	border-bottom: 3px solid var(--true-bl) !important;
+}
+
+.filter-text > h3 {
+	font-size: 14px;
+	font-weight: 500;
+	letter-spacing: 0.64512px;
+}
+.aw {
+	display: block;
+	margin: 10px auto;
+}
+.aw > svg {
+	padding: 2px 11px;
+}
+.aw.right {
+	transform: var(--rotate-ar);
+}
+.slide-point {
+	transform: translate(var(--slide-to), 0px);
+	transition: transform 1s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+	.hide-text {
+		transition: 2s cubic-bezier(0.75, 1, 0.75, 1);
+	}
+	.hide-bar {
+		transition: transform 1s linear;
+	}
+}
+@media only screen and (max-width: 1115px) {
+	.add-more {
+		transform: translate(-335px, 0px);
+	}
+}
+@media only screen and (max-width: 915px)  {
+	.company > svg{
+		display: block;
+		width: 30px;
+	}
+}
+@media only screen and (max-width: 990px) and (orientation: landscape) {
+	.add-more {
+		transform: translate(-320px, 0px);
+	}
+	.nav-header > span {
+		margin: 0 8px;
+	}
+	.nav-header.on0 {
+		margin-left: 5px;
+	}
+}
+@media only screen and (max-width: 830px) {
+	.wrap-last-cont {
+		gap: 5px;
+	}
+	.left-airbnb > .last > h2 {
+		font-size: 15px;
+	}
+	.right-airbnb {
+		width: 65px;
+		height: 35px;
+	}
+	.left-airbnb > .last {
+		padding: 8px 15px;
+	}
+	.nav-header > span {
+		height: 18px;
+		margin: 0 7px;
+	}
+	.nav-header > p {
+		font-size: 12px;
+	}
+	.last-icons {
+		width: 35px;
+		height: 35px;
+	}
+	.last-icons > svg {
+		width: 20px;
+		height: 20px;
+		padding: 7px;
+	}
+	.search {
+		right: 10px;
+		width: 30px;
+		height: 30px;
+	}
+	.search > svg {
+		width: 21px;
+		height: 17px;
+		padding: 7px 5px;
+	}
+	.left-airbnb > .last:hover {
+		transition: 1s cubic-bezier(0.25, 0.1, 0.26, 1.04);
+		z-index: 3;
+	}
+	.right-menu > svg {
+		width: 16px;
+		padding: 9px 12px;
+	}
+	.right-user > svg {
+		width: 25px;
+		padding: 4px 1px;
+	}
+	.right-airbnb > .nimi-shape {
+		width: 7px;
+		height: 7px;
+	}
+	.nav-header.on0 {
+		margin-left: -9px;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.search {
+		top: 10px;
+		left: 15px;
+		background: var(--hidden-el);
+	}
+	.search > svg {
+		color: var(--true-bl);
+	}
+	.filter-text {
+		display: none;
+	}
+	.nav-header.on0 {
+		margin: -22px 55px 0;
+	}
+	.on0 > p {
+		font-size: 14px;
+	}
+	.on1,
+	.on2 {
+		position: absolute;
+		left: 55px;
+		bottom: 5px;
+		color: var(--less-gray);
+		align-items: end;
+	}
+	.on2 {
+		transform: translate(80px, 0px);
+	}
+	.nav-header > span {
+		width: 3px;
+		height: 3px;
+		margin: 5px 8px;
+		border-radius: 50%;
+	}
+	.on1 > p,
+	.on2 > p {
+		font-weight: 400;
+		font-size: 14px;
+	}
+	.on0 > span,
+	.on2 > span {
+		display: none !important;
+	}
+	.on0 > p .on1 > p {
+		font-size: 12px;
+	}
+	.search > svg {
+		color: var(--true-bl);
+	}
+	.filter-icon {
+		padding: 0 10px;
+	}
+	.filter-text {
+		display: none;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.add-more {
+		transform: translate(-267px, 0px);
+	}
+	.search {
+		background: var(--transparent-style);
+		left: 12px;
+	}
+	.on0 > p {
+		font-size: 15px;
+	}
+	.on1,
+	.on2 {
+		position: absolute;
+		left: 50px;
+		bottom: 5px;
+		color: var(--less-gray);
+		align-items: end;
+	}
+	.on2 {
+		transform: translate(85px, 0px);
+	}
+	.nav-header > span {
+		width: 3px;
+		height: 3px;
+		margin: 5px 10px;
+		border-radius: 50%;
+	}
+	.on1 > p,
+	.on2 > p {
+		font-weight: 400;
+	}
+	.on0 > span,
+	.on2 > span {
+		display: none !important;
+	}
+	.on0 > p .on1 > p {
+		font-size: 12px;
+	}
+	.search > svg {
+		color: var(--true-bl);
+	}
+	.filter-icon {
+		padding: 0 10px;
+	}
+	.filter-text {
+		display: none;
+	}
+}

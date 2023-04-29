@@ -1,0 +1,39 @@
+.back-home{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: var(--backdrop);
+    z-index: 1;
+}
+@supports (-webkit-backdrop-filter: saturate(4.5) blur(19px)){
+    .back-home{
+        background: var(--backdrop);
+    }
+}
+.x-btn{
+    display: none;
+}
+
+@media only screen  and (max-width: 700px) {
+    .back-home{
+        top: 15px;
+        left: 10px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid var(--less-gray);
+        background: var(--house-simple);
+        z-index: 6;
+    }
+    .back-home::after{
+        content: "x";
+        position: absolute;
+        top: -2px;
+        left: 10px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}

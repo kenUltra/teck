@@ -1,0 +1,79 @@
+.main {
+	width: 100%;
+	background: var(--top-bg);
+	border-bottom: var(--line-push);
+}
+.wrapper {
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+}
+.left,
+.right {
+	width: 50%;
+}
+.stack {
+	width: 290px;
+}
+.stack > h1 {
+	font-size: 40px;
+}
+.asking {
+	display: block;
+}
+.asker {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 15px 0px;
+    border-bottom: var(--line-push);
+    cursor: pointer;
+}
+.head > h1 {
+	font-size: 22px;
+	font-weight: 400;
+}
+.reply {
+	display: block;
+    height: 0px;
+	visibility: hidden;
+	overflow: hidden;
+	margin: 10px 0px;
+    transition: all 1s ease;
+	opacity: 0;
+}
+.reply > p {
+	color: var(--less-gray);
+}
+.icon{
+	display: block;
+}
+@media only screen and (max-width: 850px) and (min-width: 701px) {
+	.stack{
+		width: 265px;
+	}
+	.stack > h1{
+		font-size: 35px;
+	}
+	.head > h1{
+		font-size: 17px;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.wrapper{
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+	}
+	.left,
+	.right{
+		width: auto;
+	}
+	.stack > h1{
+		font-size: 25px;
+		margin: 12px 0px;	
+	}
+	.head > h1{
+		font-size: 17px;
+	}
+}

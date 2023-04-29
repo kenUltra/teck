@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+.lang{
+	height: 100%;
+	overflow: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-rm {
+	opacity: 0.3;
+	cursor: not-allowed !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sub-header {
+	display: none !important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.remove-content {
+	border: none !important;
+	box-shadow: none !important;
 }
-
-.App-link {
-  color: #61dafb;
+.hide-B {
+	position: absolute;
+	right: 0;
+	top: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hide-A {
+	display: none;
+}
+.airbnb {
+	color: var(--baseColor-air);
+}
+.en-p {
+	width: 500px !important;
+}
+.matches,
+.not-good {
+	display: flex;
+	justify-content: center;
+}
+.expose{
+	border: var(--line-big) !important;
+	background: var(--bg-color);
+}
+.append-element {
+	height: var(--see-content) !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+.see-content > svg{
+	transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transform: rotate(180deg);
+}
+.in-us{
+	border: 2px solid !important;
+	background: var(--true-white) !important;
+}
+@media only screen  and (max-width: 850px) and (min-width: 701px){
+	.append-element{
+		height: var(--middle-size) !important;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.append-element{
+		height: var(--see-other) !important;
+	}
 }

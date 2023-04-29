@@ -1,0 +1,223 @@
+.show-some{
+    overflow: hidden;
+    height: 100%;
+}
+.back{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--back-home);
+    backdrop-filter: saturate(150%) blur(.5rem);
+    z-index: 30;
+}
+.term{
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+    max-width: 940px;
+    height: 300px;
+    margin: 0 auto;
+    transition: all 1s ease;
+    z-index: 40;
+}
+.over-term{
+    display: block;
+    position: relative;
+}
+.all-screen{
+    top: 15px;
+    height: 95%;
+}
+.term{
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow--air);
+    background: var(--top-bg);
+    overflow: hidden;
+}
+.hero-term{
+    width: 960px;
+    height: 300px;
+    overflow: hidden scroll;
+}
+.hero-term.y-axes{
+    height: 100%;
+}
+.term> .hero-term >.title>h1 {
+    margin-top: -40px;
+}
+.term > .hero-term >.title > h1::after{
+    content: "";
+    position: absolute;
+    top: 47px;
+    right: 0;
+    left: 0;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 1px;
+    background: var(--true-bl)
+}
+.term >.hero-term >.detail{
+    margin: 20px 4rem;
+}
+.term >.hero-term >.detail>h2 {
+    margin: 6px -55px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: initial;
+}
+.detail> ul{
+  list-style: upper-roman;
+  text-align: left;
+  line-height: 1.858em;
+  margin: 15px 0px;
+}
+.term> .hero-term >.detail>ol {
+    text-align: left;
+    margin: 0 -50px;
+}
+.term> .hero-term >.detail>ol >li{
+    font-weight: bold;
+    line-height: 1.9796247em;
+    font-size: 17px;
+    list-style: none;
+}
+.term> .hero-term > .detail>ol>li>p {
+    font-size: 13px;
+    line-height: 1.299519em;
+    font-weight: 400;
+    line-break: inherit;
+}
+.full-screen, .scrolling-page{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.full-screen{
+    top: 20px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    border: var(--line-push);
+    border-radius: 50%;
+    cursor: nwse-resize;
+    z-index: 30;
+}
+.scrolling-page {
+    bottom: 9px;
+    right: 50%;
+    width: 50px;
+    height: 50px;
+    border: var(--line-push);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.fixed-cirle{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: deepskyblue;
+}
+@media (prefers-reduced-motion: no-preference){
+    .fixed-cirle{
+        animation: scale 2s infinite cubic-bezier(0.21, -0.04, 1, 1) forwards
+    }
+}
+@keyframes scale {
+    from{
+        transform: scale(.75);
+    }to{
+        transform: scale(1);
+    }
+}
+@media only screen and (max-width: 950px) {
+    .term{
+        max-width: 720px;
+    }
+    .hero-term {
+        width: 740px;
+    }
+    .full-screen {
+    top: 10px;
+    right: 25px;
+    }
+    .detail> ul{
+        line-height: 1.5858em;
+    }
+}
+@media only screen and (max-width: 750px){
+    .term{
+        max-width: 500px;
+    }
+    .hero-term {
+        width: 520px;
+    }
+    .full-screen {
+        top: 10px;
+        right: 20px;
+        width: 35px;
+        height: 35px;
+    }
+    .term> .hero-term >.title>h1 {
+        font-size: 25px;
+    }
+    .term > .hero-term >.title > h1::after {
+        top: 45px;
+        max-width: 370px;
+    }
+    .term >.hero-term >.detail>h2 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .detail> ul {
+        line-height: 1.51858em;
+        margin: 9px 0px;
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .term{
+        max-width: 345px;
+    }
+    .full-screen {
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .title>h1{
+        font-size: 20px;
+    }
+    .title>h1::after{
+        top: 35px !important;
+        max-width: 177px !important;
+    }
+    .term> .hero-term >.title>h1{
+        font-size: 20px;
+    }
+    .term >.hero-term >.detail>h2{
+        font-size: 15px;
+    }
+    .term >.hero-term >.detail> ul {
+        line-height: 1.498858em;
+        margin: 15px -30px;
+    }
+    .term >.hero-term >.detail> ul> li{
+        font-size: 11px;
+    }
+    .term >.hero-term >.detail> ol > li {
+        font-size: 15px;
+        line-height: 1.935358em;
+    }
+    .term >.hero-term >.detail > ol >li> p {
+        font-size: 11px;
+        line-height: 1.599519em;
+    }
+    .hero-term {
+        width: 360px;
+    }
+}

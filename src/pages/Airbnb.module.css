@@ -1,0 +1,47 @@
+.mainText{
+    height: 4rem;
+    text-align: center;
+    background: var(--less-gray);
+}
+.hold{
+  padding: 3px 0px;
+  cursor: default;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+.hold>.content>h1{
+    font-size: 20px;
+}
+.topText>span{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--true-bl);
+}
+.hide{
+    display: block;
+}
+.hide>h1{
+    color: var(--baseColor-air);
+    height: 6em;
+}
+
+@media only screen and (max-width: 700px) {
+    .mainText{
+        position: fixed;
+        bottom: 64px;
+        left: 0;
+        right: 0;
+        height: 3rem;
+        z-index: 1;
+    }
+    .hold{
+        padding: 10px 0px;
+    }
+    .topText{
+        display: none;
+    }
+}
