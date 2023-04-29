@@ -13,8 +13,8 @@ import CenterH from "../Component/Airbnb_base/CenterHeader";
 import End from "../Component/Airbnb_base/End";
 
 class Airbnb extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 			middleNav: true,
 			headerLoad: true,
@@ -187,8 +187,10 @@ class Airbnb extends React.Component {
 		const topLevel = document.body.querySelector(".Airbnb_mainText__uGyTL");
 		const fixHeader = document.body.querySelector(".Shared_main__1sop6");
 		const subHeader = document.body.querySelector(".Shared_subNav__JFgoa");
-		const opts = {};
-		const makeHeader = new IntersectionObserver((entries, obs) => {
+		const opts = {
+			root: null,
+		};
+		const makeHeader = new IntersectionObserver((entries) => {
 			entries.forEach((element) => {
 				if (!element.isIntersecting) {
 					fixHeader.classList.add("sticky");
