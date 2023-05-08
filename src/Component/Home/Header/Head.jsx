@@ -7,7 +7,7 @@ export default function Head() {
 	const [btnOne, setBtnOne] = React.useState("");
 	const [lastBtn, setLastBtn] = React.useState("");
 	React.useEffect(() => {
-		const airL = document.querySelector(".airbnb-main>span");
+		const airL = document.querySelector(".head_icons__MYIaZ>span");
 		hostPage()
 			.then((data) => {
 				airL.innerHTML = data.airbnb;

@@ -82,7 +82,7 @@ export function KnowMore() {
 			});
 		houseIcon()
 			.then((tinyHouse) => {
-				const house = document.querySelector(".house-aircover > span");
+				const house = document.querySelector(".Setup_icon__gXkUc > span");
 				house.innerHTML = tinyHouse.tinyHouse;
 			})
 			.catch((err) => {

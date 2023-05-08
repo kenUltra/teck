@@ -3,9 +3,8 @@ const url = "https://airbnb-api-l62o.onrender.com/Home";
 
 export async function hostPage(){
 	const start = await fetch(url);
-	const usePoints = await start;
-	const usePoint = await usePoints.json();
-	return usePoint;
+	const usePoints = await start.json();
+	return usePoints.icons;
 }
 export async function PrimaryHost(){
 	const mainPoint = await fetch(url);

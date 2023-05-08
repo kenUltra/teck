@@ -37,7 +37,7 @@ class Response extends React.Component {
 			});	
 	}
 	componentDidUpdate() {
-		const icon = document.body.querySelectorAll(".Response_icon__SPzs4");
+		const icon = document.body.querySelectorAll(".Response_icon__SAcT+");
 		Arrow()
 			.then((iconAr) => {
 				icon.forEach((l) => {

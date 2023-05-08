@@ -15,32 +15,32 @@ class Home extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			locationUser: false
-		}
+			locationUser: false,
+		};
 		this.see = this.see.bind(this);
 		this.home = this.home.bind(this);
 	}
 	see() {
 		this.setState((some) => {
 			return {
-				locationUser: some.locationUser = true
-			}
-		})
+				locationUser: (some.locationUser = true),
+			};
+		});
 	}
 	home() {
 		this.setState((home) => {
 			return {
-				locationUser: home.locationUser = false
-			}
-		})
+				locationUser: (home.locationUser = false),
+			};
+		});
 	}
 	expend(where, numb) {
-		const addSome = document.body.querySelectorAll(".Response_reply__pxdLc"),
-			   seeResult = document.body.querySelectorAll(".Response_icon__SPzs4");
-			   function goal(id) {
-					addSome[id].classList.toggle("append-element");
-					seeResult[id].classList.toggle("see-content");
-		 }
+		const addSome = document.body.querySelectorAll(".Response_reply__QVJRV"),
+			seeResult = document.body.querySelectorAll(".Response_icon__SAcT+");
+		function goal(id) {
+			addSome[id].classList.toggle("append-element");
+			seeResult[id].classList.toggle("see-content");
+		}
 		switch (where) {
 			case "first-q":
 				numb = 0;
@@ -58,8 +58,7 @@ class Home extends React.Component {
 				numb = 4;
 				break;
 		}
-		return goal(numb)
-
+		return goal(numb);
 	}
 	render() {
 		return (

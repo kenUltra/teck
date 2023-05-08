@@ -37,6 +37,27 @@ class Airbnb extends React.Component {
 		let last = document.body.querySelector(".search");
 		const main = document.body.querySelector(".company");
 
+		const topLevel = document.body.querySelector(".Airbnb_mainText__A0V43");
+		const fixHeader = document.body.querySelector(".Shared_main__dk+d9");
+		const subHeader = document.body.querySelector(".Shared_subNav__1MABR");
+		const opts = {
+			root: null,
+		};
+		const makeHeader = new IntersectionObserver((entries) => {
+			entries.forEach((element) => {
+				if (!element.isIntersecting) {
+					fixHeader.classList.add("sticky");
+					subHeader.classList.add("sub-sticky");
+					this.setState({ hiddenPar: true, changeMiddle: true });
+				} else {
+					fixHeader.classList.remove("sticky");
+					subHeader.classList.remove("sub-sticky");
+					this.setState({ hiddenPar: false, changeMiddle: true });
+				}
+			});
+		}, opts);
+		makeHeader.observe(topLevel);
+
 		this.screenSize();
 		mobiles()
 			.then((nav) => {
@@ -178,26 +199,7 @@ class Airbnb extends React.Component {
 		return <CenterH />;
 	}
 	betterImage() {
-		const topLevel = document.body.querySelector(".Airbnb_mainText__uGyTL");
-		const fixHeader = document.body.querySelector(".Shared_main__1sop6");
-		const subHeader = document.body.querySelector(".Shared_subNav__JFgoa");
-		const opts = {
-			root: null,
-		};
-		const makeHeader = new IntersectionObserver((entries) => {
-			entries.forEach((element) => {
-				if (!element.isIntersecting) {
-					fixHeader.classList.add("sticky");
-					subHeader.classList.add("sub-sticky");
-					this.setState({ hiddenPar: true, changeMiddle: true });
-				} else {
-					fixHeader.classList.remove("sticky");
-					subHeader.classList.remove("sub-sticky");
-					this.setState({ hiddenPar: false, changeMiddle: true });
-				}
-			});
-		}, opts);
-		makeHeader.observe(topLevel);
+		
 	}
 	render() {
 		return (
