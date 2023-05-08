@@ -12,7 +12,7 @@ const SharedHeadeer = ({ firstElement, secondElemet }) => {
     const top = document.querySelector("html");
     const [stackLang, setStackLang] = React.useState(false);
     const slideAction = (isFromLeft = true) => {
-        const parentSlide = document.body.querySelector(".Shared_lists__Vka09");
+        const parentSlide = document.body.querySelector(".Shared_lists__ypHp4");
         const leftAr = document.body.querySelector(".Shared_btnRight__JlIoA");
         const targetSlide = Array.from(parentSlide.children);
         const leapMove = parentSlide.childNodes[0].getBoundingClientRect().width;

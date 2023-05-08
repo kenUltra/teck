@@ -25,9 +25,9 @@ class LastHead extends React.Component {
             })
         iconHead()
            .then(icons=>{
-               const lang = document.body.querySelector(".LastHead_icon__c5Dx3 > span"),
-                    menu = document.body.querySelector(".LastHead_sand__sdVoK > span"),
-                    user = document.body.querySelector(".LastHead_user__SUSxb > span");
+               const lang = document.body.querySelector(".LastHead_icon__5wK2V > span"),
+                    menu = document.body.querySelector(".LastHead_sand__vCpdt > span"),
+                    user = document.body.querySelector(".LastHead_user__Voag6 > span");
             
                lang.innerHTML = icons.worldIcon;
                menu.innerHTML = icons.sandwichMenu;

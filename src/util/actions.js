@@ -17,11 +17,11 @@ export function contentData(analitic) {
 	return analitic;
 }
 export function addition(varrible) {
-	let image = document.querySelector(".Section_image__GK3bm");
+	let image = document.querySelector(".Section_image__5bPAj");
 	return (varrible.start += Math.floor(image.getBoundingClientRect().width));
 }
 export function negative(varrible) {
-	let image = document.querySelector(".Section_image__GK3bm");
+	let image = document.querySelector(".Section_image__5bPAj");
 	return (varrible.start -= Math.floor(image.getBoundingClientRect().width));
 }
 export function parentChild(parentE = "" || undefined, leftMove = false, newValue = 0) {

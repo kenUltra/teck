@@ -6,7 +6,7 @@ export default function End() {
 	React.useEffect(function () {
 		mapIcon()
 			.then((maps) => {
-				const mapWrap = mapS(".End_icon__NBqa6>span");
+				const mapWrap = mapS(".End_icon__nwmhY>span");
 				mapWrap.innerHTML = maps.maps;
 			})
 			.catch((err) => {

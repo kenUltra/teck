@@ -124,7 +124,7 @@ class Airbnb extends React.Component {
 				{ className: "nav-header on" + unic, key: unic },
 				<p
 					onClick={() => {
-						const hideSub = document.querySelector(".Shared_subNav__JFgoa");
+						const hideSub = document.querySelector(".Shared_centerContainer__jnkkl");
 						hideSub.classList.add("sub-header");
 						this.setState({ middleNav: false });
 					}}
