@@ -10,7 +10,7 @@ function Matter(){
             <div className={Matters.removeContent}>
                    { win() }
                 <div className={Matters.content}>
-                    <h1>This page is not exist or not found</h1>
+                    <h1>The page that you try to reach is not available yet</h1>
                 </div>
             </div>
         </React.Fragment>

@@ -36,7 +36,7 @@ class Home extends React.Component {
 	}
 	expend(where, numb) {
 		const addSome = document.body.querySelectorAll(".Response_reply__QVJRV"),
-			seeResult = document.body.querySelectorAll(".Response_icon__SAcT+");
+			seeResult = document.body.querySelectorAll(".Response_icon__SAcT");
 		function goal(id) {
 			addSome[id].classList.toggle("append-element");
 			seeResult[id].classList.toggle("see-content");

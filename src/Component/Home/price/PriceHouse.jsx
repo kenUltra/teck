@@ -25,7 +25,7 @@ export default class PriceHouse extends React.Component {
 			.then(icon => {
 				const search = document.body.querySelector(".PriceHouse_iconS__4fmLr > span"),
 				     inIcon = document.body.querySelector(".PriceHouse_zoomIn__MR-tz > span"),
-					 outIcon = document.body.querySelector(".PriceHouse_zoom__LICgh"),
+					 outIcon = document.body.querySelector(".PriceHouse_zoom__LICgh "),
 					 lastIcon = outIcon.lastChild;
 
 				search.innerHTML = icon.magnifier;

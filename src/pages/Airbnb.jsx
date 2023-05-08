@@ -31,31 +31,12 @@ class Airbnb extends React.Component {
 		this.showMiddle = this.showMiddle.bind(this);
 		this.screenSize = this.screenSize.bind(this);
 		this.home = this.home.bind(this);
+		this.betterImage = this.betterImage.bind(this);
 		this.mobile = window.matchMedia("only screen and (max-width: 700px)");
 	}
 	componentDidMount() {
 		let last = document.body.querySelector(".search");
 		const main = document.body.querySelector(".company");
-
-		const topLevel = document.body.querySelector(".Airbnb_mainText__A0V43");
-		const fixHeader = document.querySelector(".Shared_main__dk+d9");
-		const subHeader = document.body.querySelector(".Shared_subNav__1MABR");
-		const opts = {};
-
-		const makeHeader = new IntersectionObserver((entries) => {
-			entries.forEach((element) => {
-				if (!element.isIntersecting) {
-					fixHeader.classList.add("sticky");
-					subHeader.classList.add("sub-sticky");
-					this.setState({ hiddenPar: true, changeMiddle: true });
-				} else {
-					fixHeader.classList.remove("sticky");
-					subHeader.classList.remove("sub-sticky");
-					this.setState({ hiddenPar: false, changeMiddle: true });
-				}
-			});
-		}, opts);
-		makeHeader.observe(topLevel);
 
 		this.screenSize();
 		mobiles()
@@ -197,7 +178,27 @@ class Airbnb extends React.Component {
 	appendMiddle() {
 		return <CenterH />;
 	}
-	betterImage() {}
+	betterImage() {
+		const topLevel = document.body.querySelector(".Airbnb_mainText__A0V43");
+		const fixHeader = document.body.querySelector(".Shared_main__dk+d9");
+		const subHeader = document.body.querySelector(".Shared_subNav__1MABR");
+		const opts = {};
+
+		const makeHeader = new IntersectionObserver((entries, opts) => {
+			entries.forEach((element) => {
+				if (!element.isIntersecting) {
+					fixHeader.classList.add("sticky");
+					subHeader.classList.add("sub-sticky");
+					this.setState({ hiddenPar: true, changeMiddle: true });
+				} else {
+					fixHeader.classList.remove("sticky");
+					subHeader.classList.remove("sub-sticky");
+					this.setState({ hiddenPar: false, changeMiddle: true });
+				}
+			});
+		}, opts);
+		makeHeader.observe(topLevel);
+	}
 	render() {
 		return (
 			<React.Fragment>
@@ -226,7 +227,7 @@ class Airbnb extends React.Component {
 					}
 					secondElemet={this.state.middleNav ? this.showMiddle() : this.appendMiddle()}
 				/>
-
+				{this.betterImage()}
 				<HomePage />
 				<End />
 			</React.Fragment>
