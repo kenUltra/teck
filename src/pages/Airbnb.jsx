@@ -38,7 +38,7 @@ class Airbnb extends React.Component {
 		const main = document.body.querySelector(".company");
 
 		const topLevel = document.body.querySelector(".Airbnb_mainText__A0V43");
-		const fixHeader = document.body.querySelector(".Shared_main__dk+d9");
+		const fixHeader = document.querySelector(".Shared_main__dk+d9");
 		const subHeader = document.body.querySelector(".Shared_subNav__1MABR");
 		const opts = {
 			root: null,
@@ -198,9 +198,7 @@ class Airbnb extends React.Component {
 	appendMiddle() {
 		return <CenterH />;
 	}
-	betterImage() {
-		
-	}
+	betterImage() {}
 	render() {
 		return (
 			<React.Fragment>

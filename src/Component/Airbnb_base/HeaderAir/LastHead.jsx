@@ -41,7 +41,7 @@ class LastHead extends React.Component {
         return (
             <div className={last.content}>
                 <div className={last.text}>
-                    <Link to="/become-hoster">
+                    <Link to="/AirCover">
                         <h2>{this.state.lasthead}</h2>
                     </Link>
                 </div>

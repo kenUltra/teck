@@ -13,7 +13,7 @@ const routePage = createBrowserRouter(
 			<Route path="/host-house">
 				<Route index element={<Host />} />
 			</Route>
-			<Route path="/become-hoster">
+			<Route path="/AirCover">
 				<Route index element={<Home />} />
 			</Route>
 			<Route path="/search-index">
