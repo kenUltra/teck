@@ -56,7 +56,6 @@ class Airbnb extends React.Component {
 			.then((data) => {
 				if (last) {
 					last.innerHTML = data.searchIcon;
-					return;
 				} else {
 					last = null;
 				}
@@ -128,11 +127,6 @@ class Airbnb extends React.Component {
 						const hideSub = document.querySelector(".Shared_subNav__JFgoa");
 						hideSub.classList.add("sub-header");
 						this.setState({ middleNav: false });
-						if (unic === 0) {
-							<h1>Hello form the location</h1>;
-						} else {
-							console.log("other thing or id", unic);
-						}
 					}}
 				>
 					{middle}

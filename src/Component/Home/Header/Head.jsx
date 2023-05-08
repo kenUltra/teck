@@ -16,24 +16,23 @@ export default function Head() {
 				console.error(e, "one page");
 			});
 		second()
-			.then(setup => {
+			.then((setup) => {
 				setBtnOne((other) => {
-					return other = setup.btnAir
-				})
-			}
-			)
-			.catch(err => {
-				console.error(err);
+					return (other = setup.btnAir);
+				});
 			})
+			.catch((err) => {
+				console.error(err);
+			});
 		HostAir()
-			.then(superHost => {
-				setLastBtn(list => {
-					return list = superHost.txtb;
-				})
+			.then((superHost) => {
+				setLastBtn((list) => {
+					return (list = superHost.txtb);
+				});
 			})
-			.catch(err => {
+			.catch((err) => {
 				console.error(err);
-			})
+			});
 	}, []);
 	return (
 		<React.Fragment>
@@ -63,28 +62,32 @@ export function Setting({ txt }) {
 	React.useEffect(() => {
 		const icon = document.body.querySelector(".head_iconLeft__BdGHt > span");
 		hostPage()
-			.then(house => {
+			.then((house) => {
 				icon.innerHTML = house.tinyHouse;
 			})
-			.catch(err => {
+			.catch((err) => {
 				console.error(err);
-			})
-	}, [])
-	return (<div className={head.one}>
-		<div className={head.iconLeft}>
-			<span></span>
+			});
+	}, []);
+	return (
+		<div className={head.one}>
+			<div className={head.iconLeft}>
+				<span></span>
+			</div>
+			<div className={head.text}>
+				<h1>{txt}</h1>
+			</div>
 		</div>
-		<div className={head.text}>
-			<h1>{txt}</h1>
-		</div>
-	</div>)
+	);
 }
 export function TextingHost({ txtDef }) {
-	return (<div className={head.chat}>
-		<div className={head.line}>
-			<Link to="http://airbnb.com" aria-autocomplete="inline">
-				<h1>{txtDef}</h1>
-			</Link>
+	return (
+		<div className={head.chat}>
+			<div className={head.line}>
+				<Link to="https://airbnb.com" aria-autocomplete="inline">
+					<h1>{txtDef}</h1>
+				</Link>
+			</div>
 		</div>
-	</div>)
+	);
 }

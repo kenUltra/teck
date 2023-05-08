@@ -124,7 +124,7 @@ class AirC extends React.Component {
 									{this.state.ACover} {this.airbnCompare()}
 								</p>
 							</div>
-							<Btnlink urlPage="http://airbnb.com"/>
+							<Btnlink urlPage="https://airbnb.com"/>
 						</div>
 					</div>
 				</section>

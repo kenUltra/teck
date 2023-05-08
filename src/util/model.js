@@ -1,7 +1,7 @@
 //import { contentData as data } from "./actions";
 // const locationLink = "https://airbnb-api-l62o.onrender.com/home";
 const locationLink = "https://airbnb-api-l62o.onrender.com/Airbnb-location";
-const languageLink = "https://airbnb-api-l62o.onrender.com/home/Airbnb-lang";
+const languageLink = "https://airbnb-api-l62o.onrender.com/Airbnb-lang";
 
 export function makeUpper(changetext) {
 	const start = [...changetext];
@@ -17,8 +17,8 @@ export function manyElement(target) {
 }
 export async function getHeaderData() {
 	const action = await fetch(locationLink);
-	const head = await action;
-	const icons = head.Header;
+	const head = await action.json();
+	const icons = await head.Header;
 	return icons;
 }
 export async function textHeader() {
