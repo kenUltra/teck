@@ -1,5 +1,5 @@
 //import { from './actions';
-const url = "https://airbnb-api-l62o.onrender.com/";
+const url = "https://airbnb-api-l62o.onrender.com/Home";
 
 export async function hostPage(){
 	const start = await fetch(url);
