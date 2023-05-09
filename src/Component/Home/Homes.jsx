@@ -11,7 +11,7 @@ import EndingPage from "./AirFooter/EndingPage";
 import AreaPlace from "./Imagine/AreaPlace";
 import HiddenHome from "./Imagine/HiddenHome";
 
-class Home extends React.Component {
+class Homes extends React.Component {
 	constructor() {
 		super();
 		this.state = {
@@ -72,13 +72,13 @@ class Home extends React.Component {
 				<Friendly />
 				{this.state.locationUser ? <AreaPlace backHome={this.home} /> : null}
 				{this.state.locationUser && <HiddenHome returnHome={this.home} />}
-				<Response expendContent={this.expend} />
+				<Response expendContent={this.expend} moreClass={"ask_187xwd"}/>
 				<EndingPage />
 			</React.Fragment>
 		);
 	}
 }
-export default Home;
+export default Homes;
 
 export function Piece() {
 	return (

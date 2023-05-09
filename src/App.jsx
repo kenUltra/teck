@@ -4,7 +4,7 @@ import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } 
 import Host from "./pages/Host";
 import Matter from "./pages/Matter";
 import Airbnb from "./pages/Airbnb";
-import Home from "./Component/Home/Home";
+import Home from "./Component/Home/Homes";
 
 const routePage = createBrowserRouter(
 	createRoutesFromElements(

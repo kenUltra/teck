@@ -27,7 +27,7 @@ export default function HeaderHost({ btnSign }) {
       <div className={Wrap.menber}>
         <div className={Wrap.ones}>
           <span>
-            <Link to="/become-hoster">
+            <Link to="/AirCover">
             <p>Airbnb your home</p>
             </Link>
           </span>

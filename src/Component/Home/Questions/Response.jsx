@@ -13,7 +13,7 @@ class Response extends React.Component {
 		this.airbnbQuestion = this.airbnbQuestion.bind(this);
 	}
 	componentDidMount() {
-		const icon = document.body.querySelectorAll(".Response_icon__SPzs4");
+		const icon = document.body.querySelectorAll(".qa_125xca");
 		question()
 			.then((QA) => {
 				this.setState((data) => {
@@ -34,10 +34,10 @@ class Response extends React.Component {
 			})
 			.catch((err) => {
 				console.error(err);
-			});	
+			});
 	}
 	componentDidUpdate() {
-		const icon = document.body.querySelectorAll(".Response_icon__SAcT+");
+		const icon = document.body.querySelectorAll(".qa_125xca");
 		Arrow()
 			.then((iconAr) => {
 				icon.forEach((l) => {
@@ -56,8 +56,9 @@ class Response extends React.Component {
 					question={reply.question}
 					reply={reply.reply}
 					more={reply.classR}
-					moreContent={()=>{
-						this.props.expendContent(reply.id)
+					moreClass={this.props.moreClass}
+					moreContent={() => {
+						this.props.expendContent(reply.id);
 					}}
 				/>
 			);
@@ -83,18 +84,23 @@ class Response extends React.Component {
 }
 export default Response;
 
-export function ListQuestion({ question, reply, moreContent, more }) {
+export function ListQuestion({ question, reply, moreContent, more, moreClass }) {
 	return (
 		<div className={Qa.asking}>
-			<div className={Qa.asker} onClick={()=>{ moreContent() }}>
+			<div
+				className={Qa.asker}
+				onClick={() => {
+					moreContent();
+				}}
+			>
 				<div className={Qa.head}>
 					<h1>{question}</h1>
 				</div>
-				<div className={Qa.icon}>
+				<div className={Qa.icon + " qa_125xca"}>
 					<span></span>
 				</div>
 			</div>
-			<div className={Qa.reply + " " + more}>
+			<div className={Qa.reply + " " + more + " " + moreClass}>
 				<p>{reply}</p>
 			</div>
 		</div>

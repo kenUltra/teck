@@ -68,6 +68,39 @@ code {
 	.new-head {
 		animation: long 1s infinite ease-in-out;
 	}
+	.on_post12ef0 {
+		animation: onceAct 1000ms ease forwards alternate infinite;
+	}
+	.on_post12ef1 {
+		animation: SecondAct 1500ms ease forwards alternate-reverse infinite;
+	}
+	.on_post12ef2 {
+		animation: ThirdAct 1000ms ease backwards alternate infinite;
+	}
+}
+@keyframes onceAct {
+	0% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-5px);
+	}
+}
+@keyframes SecondAct {
+	0% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-5px);
+	}
+}
+@keyframes ThirdAct {
+	0% {
+		transform: translateY(10px);
+	}
+	100% {
+		transform: translateY(-5px);
+	}
 }
 @media only screen and (max-width: 700px) {
 	.new-head {

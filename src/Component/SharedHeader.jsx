@@ -70,7 +70,7 @@ const SharedHeadeer = ({ firstElement, secondElemet }) => {
 	};
 	return (
 		<React.Fragment>
-			<div className={Shared.main}>
+			<div className={Shared.main + " Nav_12xcLinexc"}>
 				<div className={Shared.heroMain}>
 					<div className={Shared.start}>{firstElement}</div>
 					<div className={Shared.center}>
@@ -137,7 +137,7 @@ export function SubHeader(props) {
 	};
 	return (
 		<React.Fragment>
-			<div className={Shared.subNav}>
+			<div className={Shared.subNav + " second_12cx1P"}>
 				<div className={Shared.subCont}>
 					<div className={Shared.lists}>{loadSubNav ? <LoadSub /> : point()}</div>
 					<div className={Shared.btn}>

@@ -6,6 +6,7 @@ export default class PriceHouse extends React.Component {
 	constructor() {
 		super();
 		this.state = {
+			loadDots: true,
 			titleName: "",
 			subTl: "",
 			lastT: "",
@@ -22,19 +23,19 @@ export default class PriceHouse extends React.Component {
 	}
 	componentDidMount() {
 		hostPage()
-			.then(icon => {
+			.then((icon) => {
 				const search = document.body.querySelector(".PriceHouse_iconS__4fmLr > span"),
-				     inIcon = document.body.querySelector(".PriceHouse_zoomIn__MR-tz > span"),
-					 outIcon = document.body.querySelector(".PriceHouse_zoom__LICgh "),
-					 lastIcon = outIcon.lastChild;
+					inIcon = document.body.querySelector(".PriceHouse_zoomIn__MR-tz > span"),
+					outIcon = document.body.querySelector(".PriceHouse_zoom__LICgh "),
+					lastIcon = outIcon.lastChild;
 
 				search.innerHTML = icon.magnifier;
 				inIcon.innerHTML = icon.plusIcon;
 				lastIcon.childNodes[0].innerHTML = icon.nimusIcon;
 			})
-			.catch(err => {
+			.catch((err) => {
 				console.error(err, "The icon can be find anywhere");
-			})
+			});
 		main()
 			.then((data) => {
 				this.setState((old) => {
@@ -49,12 +50,18 @@ export default class PriceHouse extends React.Component {
 						earn: (old.earn = data.Choice),
 						userPlace: (old.userPlace = data.location),
 						maxEarn: (old.maxEarn = data.maxPrice),
+						loadDotsL: (old.loadDots = false),
 					};
 				});
 			})
 			.catch((err) => {
 				console.error(err, "the err");
 			});
+		const mainPoint = document.querySelector(".PriceHouse_dotsBar__8FfBb");
+		const listPoint = mainPoint.childNodes;
+		listPoint.forEach((point, baseOne) => {
+			return point.classList.add("on_post12ef" + baseOne);
+		});
 	}
 	change() {
 		const a = document.querySelector(".number-slide").value;
@@ -63,6 +70,16 @@ export default class PriceHouse extends React.Component {
 			slideP.style.setProperty("--position-slide", Math.floor(old.money / 10) + "%");
 			return { money: (old.money = a) };
 		});
+	}
+	dots() {
+		const dotLoad = [1, 2, 3];
+
+		const listBar = dotLoad.map((dot) => {
+			return <DotsPoint key={dot} />;
+		});
+
+		const wraperList = React.createElement("div", { className: "PriceHouse_dotsBar__8FfBb" }, listBar);
+		return wraperList;
 	}
 	render() {
 		return (
@@ -101,7 +118,7 @@ export default class PriceHouse extends React.Component {
 									</div>
 									<div className={price.text}>
 										<h5>{this.state.place}</h5>
-										<div className={price.thing} >
+										<div className={price.thing}>
 											<p>{this.state.aboutPlace}</p>
 											<span>.</span>
 											<p>{this.state.room}</p>
@@ -114,14 +131,12 @@ export default class PriceHouse extends React.Component {
 							<div className={price.map}>
 								<div className={price.mapUser}></div>
 								<div className={price.action}>
-									<div className={price.where}>
-										<h1>{this.state.userPlace}</h1>
-									</div>
+									<div className={price.where}>{this.state.loadDots ? this.dots() : <h1>{this.state.userPlace}</h1>}</div>
 									<div className={price.zoom}>
 										<div className={price.zoomIn}>
 											<span></span>
 										</div>
-										
+
 										<div className={price.spacer}>
 											<span></span>
 										</div>
@@ -138,4 +153,7 @@ export default class PriceHouse extends React.Component {
 			</React.Fragment>
 		);
 	}
+}
+export function DotsPoint() {
+	return <div className={price.loadingDots}></div>;
 }
