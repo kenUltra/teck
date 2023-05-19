@@ -15,7 +15,7 @@ class Fixed extends React.Component {
 				const wish = oneHtml(".hero-mob.middle");
 				const mobileLog = oneHtml(".hero-mob.last");
 				const parentLogo = oneHtml(".Fix_mCo_fe2cn");
-				const son = parentLogo.children;
+				const son = parentLogo.childNodes;
 				son[0].children[0].classList.add("se");
 
 				son.forEach((start, count) => {
@@ -36,7 +36,7 @@ class Fixed extends React.Component {
 				mobileLog.innerHTML = icons.logIcon;
 			})
 			.catch((error) => {
-				console.error(error, "Some thing went");
+				console.error(error, "The icon is miss");
 			});
 	}
 	render() {
