@@ -74,7 +74,7 @@ const SharedHeadeer = ({ firstElement, secondElemet }) => {
 				<div className={Shared.heroMain}>
 					<div className={Shared.start}>{firstElement}</div>
 					<div className={Shared.center}>
-						<div className={Shared.centerContainer}>{secondElemet}</div>
+						<div className={Shared.centerContainer + " Shared_centerC0f25xs"}>{secondElemet}</div>
 					</div>
 					<div className={Shared.end}>
 						<LastHead changeLang={lang} />

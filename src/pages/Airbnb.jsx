@@ -110,15 +110,19 @@ class Airbnb extends React.Component {
 				console.error(err, "sone");
 			});
 		window.addEventListener("resize", () => {
-			/*const header = document.body.querySelector(".Shared_main__1sop6"),
+			const header = document.body.querySelector(".Nav_12xcLinexc"),
+				middle = document.body.querySelector(".Shared_centerC0f25xs"),
+				childNav = document.body.querySelector(".second_12cx1P");
+			/*		
+			  const header = document.body.querySelector(".Shared_main__1sop6"),
 				middle = document.body.querySelector(".Shared_centerContainer__RC2AY"),
 				childNav = document.body.querySelector(".Shared_subNav__JFgoa");*/
 			this.setState((window) => {
-				/*if (header.classList.contains("new-head") && middle.classList.contains("remove-content") && childNav.classList.contains("sub-header")) {
+				if (header.classList.contains("new-head") && middle.classList.contains("remove-content") && childNav.classList.contains("sub-header")) {
 					header.classList.remove("new-head");
 					middle.classList.remove("remove-content");
 					childNav.classList.remove("sub-header");
-				}*/
+				}
 				return { middleNav: (window.middleNav = true) };
 			});
 		});
@@ -159,6 +163,7 @@ class Airbnb extends React.Component {
 				<span></span>
 			);
 		});
+
 		return [list, search];
 	}
 	lessScreen() {

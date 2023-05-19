@@ -23,50 +23,42 @@ export async function getHeaderData() {
 }
 export async function textHeader() {
 	const main = await fetch(locationLink);
-	const use = await main;
-	const firstNave = await use.json();
+	const firstNave = await main.json();
 	return [firstNave.centerNavigation, firstNave.newCenterNavigation];
 }
 export async function subNavData() {
 	const makeSome = await fetch(locationLink);
-	const use = await makeSome;
-	const start = await use.json();
+	const start = await makeSome.json();
 	return start.subHeader;
 }
 export async function lotData() {
 	const pount = await fetch(locationLink);
-	const more = await pount;
-	const usePoint = await more.json();
+	const usePoint = await pount.json();
 	return usePoint.infinite;
 }
 export async function mobileSize() {
 	const m = await fetch(locationLink);
-	const moe = await m;
-	const mob = await moe.json();
+	const mob = await m.json();
 	return mob.mobileData;
 }
 export async function searchTitle() {
 	const datas = await fetch(locationLink);
-	const gets = await datas;
-	const get = await gets.json();
+	const get = await datas.json();
 	return get.newNavigation.parentNewNav;
 }
 export async function datesStack() {
 	const mainData = await fetch(locationLink);
-	const usel = await mainData;
-	const use = await usel.json();
+	const use = await mainData.json();
 	return use.dates;
 }
 export async function searchContent() {
 	const d = await fetch(locationLink);
-	const gets = await d;
-	const get = await gets.json();
+	const get = await d.json();
 	return get.newNavigation.childNewNav;
 }
 export async function Languages() {
 	const leng = await fetch(languageLink);
-	const uses = await leng;
-	const use = await uses.json();
+	const use = await leng.json();
 	return use.language;
 }
 export function stringMonth(addOne = 0) {

@@ -102,10 +102,10 @@ export default class PriceHouse extends React.Component {
 									<span>{this.state.lastT}</span>
 								</div>
 								<div className={price.slice}>
-									<div className={price.current}></div>
+									<div className={price.current + " PriceHouse_current__s6iGJ"}></div>
 								</div>
 								<div className={price.change}>
-									<input type="range" min={0} value={this.state.money} max={this.state.maxEarn} className={"number-slide"} onChange={this.change} />
+									<input type="range" min={0} value={this.state.money} max={this.state.maxEarn} className="number-slide" onChange={this.change} />
 								</div>
 							</div>
 							<div className={price.morePrecise}>

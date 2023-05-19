@@ -23,8 +23,8 @@ class CenterH extends React.Component{
         this.one = this.one.bind(this);
     }
     componentDidMount(){
-        const parent = document.body.querySelector(".Shared_centerContainer__RC2AY");
-        const sub = document.body.querySelector(".Shared_subNav__JFgoa");
+        const parent = document.body.querySelector(".Shared_centerC0f25xs");
+        const sub = document.body.querySelector(".second_12cx1P");
         const rootP = sub.previousElementSibling;
         parent.classList.add("remove-content");
         rootP.classList.add("new-head");

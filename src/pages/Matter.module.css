@@ -1,15 +1,48 @@
-.removeContent{
-    background: var(--center-color);
-    position: relative;
-    height: 100pc;
+.removeContent {
+	background: var(--center-color);
+	position: relative;
+	height: 100pc;
 }
-.content{
-    text-align: center;
-    background: var(--bg-color);
-    border-radius: 10px;
-    position: absolute;
-    top: 200px;
-    left: 40px;
-    right: 50px;
-    height: 138px;
+.content {
+	text-align: center;
+	background: var(--bg-color);
+	border-radius: 10px;
+	position: absolute;
+	top: 200px;
+	left: 40px;
+	right: 50px;
+	height: 220px;
+}
+.content > h1 a{
+    text-decoration: none;
+}
+.detail {
+	height: 100px;
+}
+.detail > a {
+	display: block;
+	width: 130px;
+	height: 40px;
+	font-size: 20px;
+	padding-top: 7px;
+	margin: 15px auto 0px;
+	color: var(--bg-color);
+	background: var(--better-color-oc);
+	border-radius: 10pc;
+	text-decoration: none;
+}
+@media only screen and (max-width: 550px) {
+	.content > h1 {
+		width: 85%;
+		margin: 15px auto;
+		font-size: 20px;
+	}
+	.detail > h2 {
+		font-size: 17px;
+	}
+	.detail > a {
+		font-size: 16px;
+		width: 100px;
+		height: 32px;
+	}
 }

@@ -27,6 +27,7 @@
 	--font-color-white: #f7f7f7;
 	--house-simple: #ffffff;
 	--blue-ocean: #428bff;
+	--better-color-oc: #0071e3;
 	--deep-color: #000;
 	--shade-color: #92174d;
 	--shade-purple: #460479;
@@ -63,7 +64,20 @@ code {
 	transform: all 1s ease;
 	z-index: 600;
 }
-
+.main-rendering {
+	max-width: 90%;
+	text-align: center;
+	margin: 0 auto;
+	line-height: 1.15489;
+	padding: 15px 0px;
+	color: var(--deep-color);
+	background: var(--top-bg);
+}
+.advice > h1{
+	width: 80%;
+	font-weight: bold;
+    margin: 0 auto;
+}
 @media (prefers-reduced-motion: no-preference) {
 	.new-head {
 		animation: long 1s infinite ease-in-out;

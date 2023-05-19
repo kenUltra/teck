@@ -11,12 +11,12 @@ class Fixed extends React.Component {
 	componentDidMount() {
 		iconNav()
 			.then((icons) => {
-				const mobileNav = oneHtml(".hero-mob .one");
-				const wish = oneHtml(".hero-mob .middle");
-				const mobileLog = oneHtml(".hero-mob .last");
-				const parentLogo = oneHtml(".Fixed_mContent__q4vur");
-				const son = parentLogo.childNodes;
-				son[0].childNodes[0].classList.add("se");
+				const mobileNav = oneHtml(".hero-mob.one");
+				const wish = oneHtml(".hero-mob.middle");
+				const mobileLog = oneHtml(".hero-mob.last");
+				const parentLogo = oneHtml(".Fix_mCo_fe2cn");
+				const son = parentLogo.children;
+				son[0].children[0].classList.add("se");
 
 				son.forEach((start, count) => {
 					start.addEventListener("click", () => {
@@ -27,8 +27,8 @@ class Fixed extends React.Component {
 					son.forEach((l) => {
 						l.classList.remove("visit");
 					});
-					son[0].childNodes[1].classList.add("col");
-					son[0].childNodes[0].classList.remove("se");
+					son[0].children[1].classList.add("col");
+					son[0].children[0].classList.remove("se");
 					son[tar].classList.add("visit");
 				}
 				mobileNav.innerHTML = icons.searchIcon;
@@ -43,7 +43,7 @@ class Fixed extends React.Component {
 		return (
 			<React.Fragment>
 				<div className={Fixing.mobile}>
-					<div className={Fixing.mContent}>
+					<div className={Fixing.mContent + " Fix_mCo_fe2cn"}>
 						<div className={Fixing.left}>
 							<div className="hero-mob one"></div>
 							<p>{this.props.explore}</p>
